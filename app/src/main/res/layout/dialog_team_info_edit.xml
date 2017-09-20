@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/dialog_team_info_edit_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="15dp"
+        card_view:cardBackgroundColor="@color/app_background_color"
+        card_view:cardCornerRadius="4dp">
+
+        <LinearLayout
+            android:id="@+id/team_detail_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_background_color"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <com.ontro.customui.ProfileImageView
+                android:id="@+id/dialog_team_info_edit_iv"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profiledefaultimg"
+                app:paddingStart="0dp" />
+
+            <EditText
+                android:id="@+id/dialog_team_info_edit_et_name"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/login_edittext_bg"
+                android:drawableLeft="@drawable/pd_name"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/pd_name"
+                android:gravity="center_vertical"
+                android:hint="@string/team_name"
+                android:inputType="textPersonName|textCapSentences"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/hint_color" />
+
+            <com.ontro.customui.MediumTextView
+                android:id="@+id/dialog_team_info_edit_et_location"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/login_edittext_bg"
+                android:drawableLeft="@drawable/location"
+                android:drawablePadding="5dp"
+                android:drawableStart="@drawable/location"
+                android:gravity="center_vertical"
+                android:hint="@string/location"
+                android:inputType="textPersonName|textCapSentences"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/hint_color" />
+
+            <RelativeLayout
+                android:id="@+id/dialog_team_info_rl_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/overview_edittext_bg"
+                android:padding="12dp">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:contentDescription="@null"
+                    android:src="@drawable/overview" />
+
+                <EditText
+                    android:id="@+id/dialog_team_info_edit_et_overview"
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:layout_toEndOf="@id/image"
+                    android:layout_toRightOf="@id/image"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="@string/over_view"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/hint_color" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/dialog_team_info_edit_btn_save"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_bg_normal"
+                android:text="@string/team_detail_save"
+                android:textAllCaps="true"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/dialog_team_info_edit_iv_dismiss"
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:layout_gravity="right"
+                android:scaleType="centerInside"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_5"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_close_white" />
+        </FrameLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

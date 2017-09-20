@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="@android:color/transparent" />
+    <stroke android:color="@color/player_invite_cancel_color" android:width="@dimen/dp_1" />
+    <corners android:radius="@dimen/dp_5" />
+
+</shape>

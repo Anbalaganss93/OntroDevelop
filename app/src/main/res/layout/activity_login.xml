@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_app_background"
+    android:fillViewport="true"
+    tools:context="com.ontro.LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/outertouch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/activity_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/activity_layout_right_margin"
+            android:layout_marginLeft="@dimen/activity_layout_left_margin"
+            android:layout_marginRight="@dimen/activity_layout_right_margin"
+            android:layout_marginStart="@dimen/activity_layout_left_margin"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="@null"
+                android:padding="20dp"
+                android:src="@drawable/smalllogo" />
+
+            <EditText
+                android:id="@+id/login_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/login_edittext_bg"
+                android:drawableLeft="@drawable/mail"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:hint="@string/email_address"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:padding="12dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/hint_color" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="12dp">
+
+                <EditText
+                    android:id="@+id/login_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/login_edittext_bg"
+                    android:drawableLeft="@drawable/lock"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:padding="12dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/hint_color" />
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginRight="15dp"
+                    android:button="@drawable/password_selector" />
+
+            </FrameLayout>
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|top"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="35dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="@string/login_forgotpassword"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf" />
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="65dp"
+                android:layout_marginStart="65dp"
+                android:layout_marginRight="65dp"
+                android:layout_marginEnd="65dp"
+                android:background="@drawable/button_bg_normal"
+                android:padding="10dp"
+                android:text="@string/Login_button"
+                android:textAllCaps="true"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="#ffffff" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp">
+
+                <com.ontro.customui.RegularTextView
+                    android:id="@+id/connect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/connect_text"
+                    android:textAllCaps="true"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="@color/white"
+                    customui:medium="roboto_regular.ttf" />
+
+                <com.ontro.customui.RegularTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/connect"
+                    android:background="@color/white"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="@color/white"
+                    customui:medium="roboto_regular.ttf" />
+
+                <com.ontro.customui.RegularTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/connect"
+                    android:background="@color/white"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="@color/white"
+                    customui:medium="roboto_regular.ttf" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/google"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/google_button_bg_normal"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/google_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/google" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/google_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/google_img"
+                        android:text="@string/google_button"
+                        android:textAllCaps="true"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:textColor="@color/white"
+                        customui:medium="roboto_regular.ttf" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/facebook"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/facebook_button_bg_normal"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:id="@+id/fb_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginRight="5dp"
+                        android:contentDescription="@null"
+                        android:src="@drawable/facebook" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/facebook_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/fb_img"
+                        android:text="@string/facebook_button"
+                        android:textAllCaps="true"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:textColor="@color/white"
+                        customui:medium="roboto_regular.ttf" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="20dp"
+                android:gravity="bottom|center_horizontal"
+                android:orientation="horizontal">
+
+                <com.ontro.customui.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/don_t_have_an_account"
+                    android:textAllCaps="false"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="@color/white"
+                    customui:medium="roboto_regular.ttf" />
+
+                <com.ontro.customui.BoldTextView
+                    android:id="@+id/signup_in_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingStart="5dp"
+                    android:paddingTop="10dp"
+                    android:text="@string/singup_button"
+                    android:textAllCaps="true"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="#C12428"
+                    customui:bold="roboto_bold.ttf" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</ScrollView>

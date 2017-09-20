@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_app_background"
+    tools:context="com.ontro.TeamDetailActivity">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/activity_team_detail_ll_btn_container"
+        app:titleEnabled="false">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/activity_team_detail_appbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/activity_team_detail_collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@drawable/infobackground"
+                app:collapsedTitleTextAppearance="@style/CollapsedAppBar"
+                app:expandedTitleGravity="center_vertical|center_horizontal"
+                app:expandedTitleTextAppearance="@style/ExpandedAppBar"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/activity_team_detail_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginBottom="43dp"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.ontro.customui.ProfileImageView
+                            android:id="@+id/activity_team_detail_iv_player_or_team"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/profiledefaultimg"
+                            app:paddingStart="0dp" />
+
+                        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+                            android:id="@+id/activity_team_detail_circular_pb"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            app:cpb_background_progressbar_color="#B7B7B7"
+                            app:cpb_background_progressbar_width="5dp"
+                            app:cpb_progressbar_color="#C02429"
+                            app:cpb_progressbar_width="5dp" />
+
+                        <ImageView
+                            android:id="@+id/activity_team_detail_iv_sport_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="@dimen/dp_35"
+                            android:layout_marginTop="@dimen/dp_16"
+                            android:contentDescription="@string/sports" />
+
+                    </FrameLayout>
+
+                    <com.ontro.customui.BoldTextView
+                        android:id="@+id/activity_team_detail_tv_player_or_team_name"
+                        style="@android:style/TextAppearance.DeviceDefault.Large"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_horizontal"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:maxLines="2"
+                        android:textColor="@color/white"
+                        android:visibility="invisible"
+                        customui:bold="roboto_bold.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/activity_team_detail_tv_player_or_team_location"
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@color/white"
+                        customui:medium="roboto_regular.ttf" />
+                </LinearLayout>
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/activity_team_detail_tl"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_gravity="bottom"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="@android:color/white"
+                    app:tabMode="fixed" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/activity_team_detail_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:id="@+id/activity_team_detail_ll_btn_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/activity_team_detail_btn_join_team_or_cancel_request"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/dp_5"
+            android:text="@string/join_team"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:textSize="@dimen/dp_16"
+            android:background="@drawable/bg_blue_invite_to_team"/>
+
+        <Button
+            android:id="@+id/activity_team_detail_btn_invite_accept_or_request_match"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:text="@string/invite_to_match"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_16"
+            android:background="@drawable/button_bg_normal"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

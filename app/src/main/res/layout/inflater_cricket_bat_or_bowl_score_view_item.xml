@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_10">
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/inflater_cricket_bat_or_bowl_score_view_item_tv_player_name"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_3"
+            android:paddingLeft="@dimen/dp_10"
+            android:layout_weight="3"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            customui:medium="roboto_regular.ttf" />
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/inflater_cricket_bat_or_bowl_score_view_item_tv_run_or_over"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_3"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            customui:medium="roboto_regular.ttf" />
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/inflater_cricket_bat_or_bowl_score_view_item_tv_ball_or_maiden"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_3"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            customui:medium="roboto_regular.ttf" />
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/inflater_cricket_bat_or_bowl_score_view_item_tv_four_or_given_run"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_3"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            customui:medium="roboto_regular.ttf" />
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/inflater_cricket_bat_or_bowl_score_view_item_tv_six_or_wicket"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_3"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            customui:medium="roboto_regular.ttf" />
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/inflater_cricket_bat_or_bowl_score_view_item_tv_sr_or_eco"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_3"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            customui:medium="roboto_regular.ttf" />
+
+    </LinearLayout>
+
+</LinearLayout>

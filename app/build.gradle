@@ -1,0 +1,102 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    jcenter()
+    maven { url 'https://maven.fabric.io/public' }
+}
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
+    defaultConfig {
+        applicationId "com.ontro"
+        minSdkVersion 18
+        targetSdkVersion 25
+        multiDexEnabled true
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        resConfig "en"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', 'API_URL', '"https://ideomind.io/demo/ontro/api/"'
+            buildConfigField 'String', 'GOOGLE_SERVER_CLIENT', '"606105105559-udrr7cum7vs7ts97hb00b4q7kggjcgqo.apps.googleusercontent.com"'
+        }
+
+        debug {
+            buildConfigField 'String', 'API_URL', '"https://ideomind.io/demo/ontro/api/"'
+            buildConfigField 'String', 'GOOGLE_SERVER_CLIENT', '"255008106988-98ji0paalobmnn4g5j9ui1tj17drb442.apps.googleusercontent.com"'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile('com.crashlytics.sdk.android:crashlytics:2.6.8@aar') {
+        transitive = true;
+    }
+    compile project(':sdkui')
+    compile project(':lib_swipe')
+    compile project(path: ':slideview')
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.malinskiy:superrecyclerview:1.1.4'
+    compile 'me.zhanghai.android.materialprogressbar:library:1.1.7'
+    compile 'com.mikhaellopez:circularimageview:3.0.2'
+    compile 'com.makeramen:roundedimageview:2.3.0'
+    compile 'com.flaviofaria:kenburnsview:1.0.7'
+    compile 'com.github.jhonnyx2012:horizontal-picker:1.0.5'
+    compile 'com.wdullaer:materialdatetimepicker:3.2.2'
+    compile 'com.mikhaellopez:circularprogressbar:1.1.1'
+    compile 'com.android.support:recyclerview-v7:25.3.1'
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    compile 'com.philliphsu:bottomsheetpickers:2.3.1'
+    compile 'com.github.rahatarmanahmed:circularprogressview:2.5.0'
+    compile 'com.squareup.retrofit2:retrofit:2.2.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.facebook.android:facebook-android-sdk:4.20.0'
+    compile 'com.google.android.gms:play-services-plus:11.0.4'
+    compile 'com.google.android.gms:play-services-auth:11.0.4'
+    compile 'com.google.android.gms:play-services-base:11.0.4'
+    compile 'com.google.android.gms:play-services-identity:11.0.4'
+    compile 'com.android.support:palette-v7:25.3.1'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
+    compile 'com.google.firebase:firebase-core:11.0.4'
+    compile 'com.google.firebase:firebase-messaging:11.0.4'
+    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'com.github.yalantis:ucrop:2.2.1'
+    compile 'org.apache.commons:commons-lang3:3.4'
+    compile 'com.google.firebase:firebase-auth:11.0.4'
+    compile 'com.google.firebase:firebase-database:11.0.4'
+    compile 'com.google.firebase:firebase-storage:11.0.4'
+    compile 'com.github.bumptech.glide:glide:3.8.0'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.twitter.sdk.android:twitter:3.0.0'
+    compile 'io.github.luizgrp.sectionedrecyclerviewadapter:sectionedrecyclerviewadapter:1.1.3'
+    compile 'com.mixpanel.android:mixpanel-android:5.+'
+    testCompile 'junit:junit:4.12'
+}
+
+apply plugin: 'com.google.gms.google-services'

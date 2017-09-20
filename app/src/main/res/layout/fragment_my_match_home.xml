@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:background="@color/toolbar_color"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/fragment_my_match_home_tv_requested"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/invites"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/gray_100"
+            android:textAllCaps="true"/>
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/fragment_my_match_home_tv_scheduled"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/scheduled"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/gray_100"
+            android:textAllCaps="true"/>
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/fragment_my_match_home_tv_completed"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/completed"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/gray_100"
+            android:textAllCaps="true"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fragment_my_match_home_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#162029"/>
+
+</LinearLayout>

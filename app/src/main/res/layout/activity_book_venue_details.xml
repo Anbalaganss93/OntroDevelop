@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#172029">
+
+    <LinearLayout
+        android:id="@+id/activity_book_venue_details"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        tools:context="com.ontro.BookVenueDetailsActivity">
+
+        <FrameLayout
+            android:id="@+id/activity_book_venue_details_fl_view_pager_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/activity_book_venue_details_iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|start"
+                android:contentDescription="@null"
+                android:padding="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_back_arrow" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/activity_book_venue_details_iv_gallery_count"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:layout_marginRight="10dp"
+                android:drawableLeft="@drawable/ic_gallery_white"
+                customui:medium="roboto_regular.ttf" />
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/venueviewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@null"
+                android:src="@drawable/view360" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/activity_book_venue_details_tv_venue_name"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:text="@string/book_venue_name"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/activity_book_venue_details_tv_location_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:text="@string/venue"
+                android:textAllCaps="true"
+                android:textColor="#8097AF"
+                android:textSize="12sp"
+                customui:medium="roboto_regular.ttf" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/activity_book_venue_details_tv_opening_time"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/availabletime_drawable"
+                android:gravity="center"
+                android:paddingBottom="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:text="@string/available_time"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/activity_book_venue_details_tv_venue_price"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textColor="#8097AF"
+                customui:medium="roboto_regular.ttf" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/datepicker_bg"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <com.github.jhonnyx2012.horizontalpicker.HorizontalPicker
+                    android:id="@+id/activity_book_venue_details_date_picker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/discussion_drawable_bg"
+                android:orientation="vertical">
+
+                <com.ontro.customui.RegularTextView
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/time_duration"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    customui:medium="roboto_regular.ttf" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#304352" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="25dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="25dp">
+
+                    <LinearLayout
+                        android:id="@+id/activity_book_venue_details_ll_from_time_container"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.ontro.customui.RegularTextView
+                            style="@android:style/TextAppearance.DeviceDefault.Small"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/from"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            customui:medium="roboto_regular.ttf" />
+
+                        <com.ontro.customui.RegularTextView
+                            android:id="@+id/activity_book_venue_details_tv_from_time"
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            customui:medium="roboto_regular.ttf" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@null"
+                        android:src="@drawable/doublearrow" />
+
+                    <LinearLayout
+                        android:id="@+id/activity_book_venue_details_ll_to_time_container"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.ontro.customui.RegularTextView
+                            style="@android:style/TextAppearance.DeviceDefault.Small"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/to"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            customui:medium="roboto_regular.ttf" />
+
+                        <com.ontro.customui.RegularTextView
+                            android:id="@+id/activity_book_venue_details_tv_to_time"
+                            style="@android:style/TextAppearance.DeviceDefault.Medium"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            customui:medium="roboto_regular.ttf" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/discussion_drawable_bg"
+                android:orientation="vertical">
+
+                <com.ontro.customui.RegularTextView
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/facilities"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    customui:medium="roboto_regular.ttf" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#304352" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_book_venue_details_rl_sporting_facilities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:layout_empty="@layout/emptyview"
+                    app:layout_moreProgress="@layout/view_more_progress"
+                    app:mainLayoutId="@layout/layout_recyclerview_verticalscroll"
+                    app:recyclerClipToPadding="false"
+                    app:scrollbarStyle="insideOverlay" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_book_venue_details_ll_amenities_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/discussion_drawable_bg"
+                android:orientation="vertical">
+
+                <com.ontro.customui.RegularTextView
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/amenities"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    customui:medium="roboto_regular.ttf" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#304352" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_book_venue_details_rl_amenities"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    app:layout_empty="@layout/emptyview"
+                    app:layout_moreProgress="@layout/view_more_progress"
+                    app:mainLayoutId="@layout/layout_recyclerview_verticalscroll"
+                    app:recyclerClipToPadding="false"
+                    app:scrollbarStyle="insideOverlay" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/activity_book_venue_details_btn_booking"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_bg_normal"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/booking"
+                android:textAllCaps="true"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

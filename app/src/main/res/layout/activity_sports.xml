@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbarThumbHorizontal="@null"
+    android:scrollbarThumbVertical="@null">
+
+    <LinearLayout
+        android:id="@+id/activity_personal_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.ontro.customui.RegularTextView
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="@string/type_of_sport"
+            android:textColor="#737272"
+            android:visibility="gone"
+            customui:medium="roboto_regular.ttf" />
+
+        <RadioGroup
+            android:id="@+id/radiogroupie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:visibility="gone">
+
+            <RadioButton
+                android:id="@+id/team"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:button="@null"
+                android:drawableEnd="@drawable/discussion_dialog_radio_drawable"
+                android:drawableLeft="@drawable/team"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/discussion_dialog_radio_drawable"
+                android:drawableStart="@drawable/team"
+                android:text="@string/team"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/individual"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:button="@null"
+                android:drawableEnd="@drawable/discussion_dialog_radio_drawable"
+                android:drawableLeft="@drawable/name"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/discussion_dialog_radio_drawable"
+                android:drawableStart="@drawable/name"
+                android:text="@string/individual"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/both"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:background="@null"
+                android:button="@null"
+                android:drawableEnd="@drawable/discussion_dialog_radio_drawable"
+                android:drawableLeft="@drawable/both"
+                android:drawablePadding="10dp"
+                android:drawableRight="@drawable/discussion_dialog_radio_drawable"
+                android:drawableStart="@drawable/both"
+                android:text="@string/both"
+                android:textColor="@color/white" />
+        </RadioGroup>
+
+        <com.ontro.customui.RegularTextView
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:padding="10dp"
+            android:text="@string/favourite_sports"
+            android:textAllCaps="true"
+            android:textColor="#737272"
+            customui:medium="roboto_regular.ttf" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/activity_sports_rv_favourtsport"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_bg_normal"
+            android:padding="10dp"
+            android:text="@string/save_continue"
+            android:textAllCaps="true"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E2730"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/activity_explore_player_list_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_color">
+
+        <ImageView
+            android:id="@+id/activity_explore_player_list_iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:padding="5dp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/filter_toolbar_text"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/activity_explore_player_list_iv_back"
+            android:layout_toRightOf="@id/activity_explore_player_list_iv_back"
+            android:text="@string/form_team"
+            android:textColor="@color/white"
+            customui:medium="roboto_regular.ttf" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/accept"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_bg_normal"
+        android:padding="12dp"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textAppearance="@android:style/TextAppearance.Small"
+        android:textColor="#ffffff" />
+
+    <com.malinskiy.superrecyclerview.SuperRecyclerView
+        android:id="@+id/team_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/accept"
+        android:layout_below="@id/activity_explore_player_list_toolbar"
+        android:layout_marginBottom="5dp"
+        android:scrollbarSize="0dp"
+        android:scrollbars="none"
+        app:layout_empty="@layout/emptyview"
+        app:layout_moreProgress="@layout/view_more_progress"
+        app:mainLayoutId="@layout/layout_recyclerview_verticalscroll"
+        app:recyclerClipToPadding="false"
+        app:scrollbarStyle="insideOverlay" />
+
+</RelativeLayout>
+

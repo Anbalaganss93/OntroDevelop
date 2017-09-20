@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_5">
+
+        <com.ontro.customui.ProfileImageView
+            android:id="@+id/inflater_match_squad_item_iv_player"
+            android:layout_width="@dimen/dp_45"
+            android:layout_height="@dimen/dp_45"
+            android:padding="@dimen/dp_5"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/players"/>
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/inflater_match_squad_item_tv_player_name"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/inflater_match_squad_item_iv_player"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            customui:medium="roboto_regular.ttf" />
+
+    </RelativeLayout>
+
+</LinearLayout>

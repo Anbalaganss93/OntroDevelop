@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="output$Generated" generated="true"><source path="C:\Android\.android\build-cache\a56d089405e51833e275238c24c838a5b90e07cb\output\res"/></dataSet><dataSet config="output$Generated" generated="true"><source path="C:\Android\.android\build-cache\5489ee3217564512f22f98025bc406f337e4f1aa\output\res"/></dataSet><dataSet config="main$Generated" generated="true"><source path="D:\Umm\StudioProjects\Ontro\lib_swipe\src\main\res"/><source path="D:\Umm\StudioProjects\Ontro\lib_swipe\build\generated\res\rs\release"/><source path="D:\Umm\StudioProjects\Ontro\lib_swipe\build\generated\res\resValues\release"/></dataSet><dataSet config="release$Generated" generated="true"><source path="D:\Umm\StudioProjects\Ontro\lib_swipe\src\release\res"/></dataSet><dataSet config="output" from-dependency="true" generated-set="output$Generated"><source path="C:\Android\.android\build-cache\a56d089405e51833e275238c24c838a5b90e07cb\output\res"/></dataSet><dataSet config="output" from-dependency="true" generated-set="output$Generated"><source path="C:\Android\.android\build-cache\5489ee3217564512f22f98025bc406f337e4f1aa\output\res"><file path="C:\Android\.android\build-cache\5489ee3217564512f22f98025bc406f337e4f1aa\output\res\values\values.xml" qualifiers=""><dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen><item name="item_touch_helper_previous_elevation" type="id"/><declare-styleable name="RecyclerView"><attr format="string" name="layoutManager"/><attr name="android:orientation"/><attr format="integer" name="spanCount"/><attr format="boolean" name="reverseLayout"/><attr format="boolean" name="stackFromEnd"/></declare-styleable><dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen><dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen></file></source></dataSet><dataSet config="main" generated-set="main$Generated"><source path="D:\Umm\StudioProjects\Ontro\lib_swipe\src\main\res"><file path="D:\Umm\StudioProjects\Ontro\lib_swipe\src\main\res\values\attrs.xml" qualifiers=""><declare-styleable name="SwipeLayout">
+        <attr name="drag_edge">
+            <flag name="left" value="1"/>
+            <flag name="right" value="2"/>
+            <flag name="top" value="4"/>
+            <flag name="bottom" value="8"/>
+        </attr>
+        <attr format="dimension" name="leftEdgeSwipeOffset"/>
+        <attr format="dimension" name="rightEdgeSwipeOffset"/>
+        <attr format="dimension" name="topEdgeSwipeOffset"/>
+        <attr format="dimension" name="bottomEdgeSwipeOffset"/>
+        <attr format="enum" name="show_mode">
+            <enum name="lay_down" value="0"/>
+            <enum name="pull_out" value="1"/>
+        </attr>
+        <attr format="boolean" name="clickToClose"/>
+    </declare-styleable></file></source><source path="D:\Umm\StudioProjects\Ontro\lib_swipe\build\generated\res\rs\release"/><source path="D:\Umm\StudioProjects\Ontro\lib_swipe\build\generated\res\resValues\release"/></dataSet><dataSet config="release" generated-set="release$Generated"><source path="D:\Umm\StudioProjects\Ontro\lib_swipe\src\release\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="SwipeLayout"><attr name="drag_edge">
+            <flag name="left" value="1"/>
+            <flag name="right" value="2"/>
+            <flag name="top" value="4"/>
+            <flag name="bottom" value="8"/>
+        </attr><attr format="dimension" name="leftEdgeSwipeOffset"/><attr format="dimension" name="rightEdgeSwipeOffset"/><attr format="dimension" name="topEdgeSwipeOffset"/><attr format="dimension" name="bottomEdgeSwipeOffset"/><attr format="enum" name="show_mode">
+            <enum name="lay_down" value="0"/>
+            <enum name="pull_out" value="1"/>
+        </attr><attr format="boolean" name="clickToClose"/></declare-styleable><declare-styleable name="RecyclerView"><attr format="string" name="layoutManager"/><attr name="android:orientation"/><attr format="integer" name="spanCount"/><attr format="boolean" name="reverseLayout"/><attr format="boolean" name="stackFromEnd"/></declare-styleable></configuration></mergedItems></merger>

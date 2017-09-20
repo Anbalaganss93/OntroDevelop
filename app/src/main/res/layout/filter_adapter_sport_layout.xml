@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/sportcontainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_filter_sport_selection"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/dp_5">
+
+        <ImageView
+            android:id="@+id/sport_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"/>
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/sport_name"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:maxLines="1"
+            android:padding="@dimen/dp_7"
+            android:textColor="@color/white"
+            customui:medium="roboto_regular.ttf" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/sportbackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

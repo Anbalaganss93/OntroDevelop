@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/tv_q1"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/score_bg_selector"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:hint="@string/zero"
+            android:inputType="number"
+            android:maxLength="3"
+            android:paddingBottom="7dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="7dp"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:textColor="@color/white"
+            android:textColorHint="@color/text_unselected" />
+
+        <LinearLayout
+            android:id="@+id/set_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_reset_grey"
+                android:visibility="gone" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/tv_update_quarter_one"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:background="@drawable/set_bg_drawable"
+                android:drawableEnd="@drawable/down_arr"
+                android:drawablePadding="2dp"
+                android:drawableRight="@drawable/down_arr"
+                android:gravity="center"
+                android:longClickable="true"
+                android:maxLines="1"
+                android:paddingBottom="3dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="3dp"
+                android:text="@string/_1q"
+                android:textAllCaps="true"
+                android:textColor="@color/text_normal"
+                app:medium="roboto_regular.ttf" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_close_grey"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="@dimen/divider_height"
+            android:layout_height="29dp"
+            android:layout_centerHorizontal="true"
+            android:background="@color/text_normal" />
+
+        <View
+            android:layout_width="@dimen/divider_height"
+            android:layout_height="28dp"
+            android:layout_below="@+id/set_container"
+            android:layout_centerHorizontal="true"
+            android:background="@color/text_normal" />
+
+        <EditText
+            android:id="@+id/tv_q2"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/score_bg_selector"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:hint="@string/zero"
+            android:inputType="number"
+            android:maxLength="3"
+            android:paddingBottom="7dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="7dp"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:textColor="@color/white"
+            android:textColorHint="@color/text_unselected" />
+
+    </RelativeLayout>
+
+</FrameLayout>

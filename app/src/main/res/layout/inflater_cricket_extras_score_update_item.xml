@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/inflater_cricket_extras_score_update_item_tv_team_name"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:padding="@dimen/dp_10"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            customui:medium="roboto_regular.ttf" />
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/inflater_cricket_extras_score_update_item_iv_extras_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/dp_10"
+                android:padding="@dimen/dp_1"
+                android:src="@drawable/ic_score_minus" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_cricket_extras_score_update_item_tv_team_goals"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/vs_circledrawable"
+                android:gravity="center"
+                android:imeOptions="flagNoExtractUi"
+                android:maxLength="2"
+                android:maxLines="1"
+                android:minWidth="@dimen/dp_35"
+                android:padding="@dimen/dp_10"
+                android:text="@string/zero"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf"/>
+
+            <ImageView
+                android:id="@+id/inflater_cricket_extras_score_update_item_iv_extras_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:padding="@dimen/dp_1"
+                android:src="@drawable/ic_score_plus" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

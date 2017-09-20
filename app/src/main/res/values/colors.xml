@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#C22428</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">@color/button_bg_color</color>
+    <color name="white">#ffffff</color>
+    <color name="white_50">#80FFFFFF</color>
+    <color name="white_25">#40FFFFFF</color>
+    <color name="litewhite">#f9f9f9</color>
+    <color name="black">#000000</color>
+    <color name="hint_color">#c1bfbf</color>
+    <color name="google_color">#D74434</color>
+    <color name="fb_color">#324A88</color>
+    <color name="menu_bg_color">#1E2A36</color>
+    <color name="teambg">#fd080c10</color>
+    <color name="app_background_color">#172029</color>
+    <color name="scorecard_color">#C32429</color>
+
+    <color name="toolbar_color">#0F1821</color>
+    <color name="titlecolor">#686868</color>
+    <color name="circle_progressbg">#B7B7B7</color>
+    <color name="circle_progressinner">#C02429</color>
+    <color name="bule_text">#65788C</color>
+    <color name="button_bg_color">#C22428</color>
+    <color name="button_bg_color_25">#40C22428</color>
+    <color name="chat_bg_color">#94231E</color>
+    <color name="add_member_color">#2C4052</color>
+    <color name="add_member_color_25">#402C4052</color>
+
+    <!--calendar-->
+    <color name="header_color">#19212C</color>
+
+    <!--horizontal datepicker  4d4d4d   30818181 #E6E6E6 -->
+    <color name="primaryTextColor">#f4b1afaf</color>
+    <color name="secundaryTextColor">#757575</color>
+    <color name="today_border">#e4e4e4</color>
+    <color name="datepicker_bg">#1E2730</color>
+    <color name="light_white">#e4e0e0</color>
+
+    <color name="text_normal">#959BA2</color>
+    <color name="text_unselected">#546371</color>
+    <color name="divider">#3A4F67</color>
+
+    <color name="game_header_text_lightgray">#777D82</color>
+    <color name="game_header_team_name_color">#D7DADC</color>
+    <color name="game_header_team_name_color_25">#40D7DADC</color>
+    <color name="vs_bg_color">#3B5D7E</color>
+    <color name="vs_bg_color_unselected">#203345</color>
+    <color name="blue_105">#3B5069</color>
+    <color name="blue_69">#273545</color>
+    <color name="color_cement">#AAB1B7</color>
+    <color name="dark_green">#15942C</color>
+    <color name="dark_green_disabled">#17662E</color>
+    <color name="submit_btn_color">#59B146</color>
+    <color name="submit_btn_color_25">#4059B146</color>
+    <color name="match_request_accept_color">#18AD35</color>
+    <color name="match_request_reject_color">#98261E</color>
+    <color name="light_green">#ec0f4e1b</color>
+    <color name="dark_red">#95221E</color>
+    <color name="light_yellow">#F7EA8D</color>
+    <color name="accent_color">@color/blue</color>
+    <color name="blue">#303F9F</color>
+    <color name="gray_100">#C9C9C9</color>
+    <color name="match_request_color">#1E2933</color>
+    <color name="black_grey">#232323</color>
+    <color name="bg_profile_tab_selected">#053772</color>
+    <color name="bg_profile_tab_unselected">#032C58</color>
+    <color name="player_invite_accept_color">#203240</color>
+    <color name="player_invite_cancel_color">#646A6E</color>
+    <color name="sport_unselection_arrow_color">#64696E</color>
+    <color name="flag_match_top_color">#33485C</color>
+    <color name="team_chat_toolbar_color">#05438C</color>
+    <color name="team_chat_status_bar_color">#022b59</color>
+    <color name="my_chat_background_color">#273340</color>
+    <color name="opponent_chat_background_color">#141D24</color>
+    <color name="chat_button_bg_color">#364859</color>
+    <color name="chat_text_hint_color">#5A6A77</color>
+    <color name="chat_detail_bg_color">#1F2933</color>
+
+</resources>

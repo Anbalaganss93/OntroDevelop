@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/adapter_invite_player_list_item_rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#121921"
+        android:padding="10dp">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/adapter_invite_player_list_item_invite_player_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:civ_border_color="#EEEEEE"
+            app:civ_border_width="1dp"
+            app:civ_shadow_color="#8BC34A" />
+
+        <RelativeLayout
+            android:id="@+id/adapter_invite_player_list_item_rv"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" >
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/adapter_invite_player_list_item_tv_player_invite_or_cancel"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/invite"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:paddingTop="@dimen/dp_7"
+                android:paddingBottom="@dimen/dp_7"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingRight="@dimen/dp_15"
+                android:elevation="@dimen/dp_2"
+                android:background="@drawable/bg_player_invite"
+                customui:medium="roboto_regular.ttf" />
+
+            <ImageView
+                android:id="@+id/adapter_invite_player_list_item_row_item_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/sport"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/dp_10"
+                android:visibility="gone"
+                android:src="@drawable/ic_football_white"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toEndOf="@id/adapter_invite_player_list_item_invite_player_image"
+            android:layout_toLeftOf="@id/adapter_invite_player_list_item_rv"
+            android:layout_toRightOf="@id/adapter_invite_player_list_item_invite_player_image"
+            android:layout_toStartOf="@id/adapter_invite_player_list_item_rv"
+            android:orientation="vertical">
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/adapter_invite_player_list_item_invite_player_name"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:paddingStart="5dp"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/adapter_invite_player_list_item_invite_player_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/location_new"
+                android:drawableStart="@drawable/location_new"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                customui:medium="roboto_regular.ttf" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/adapter_invite_player_list_item_rl_container"
+        android:background="#283038" />
+</RelativeLayout>

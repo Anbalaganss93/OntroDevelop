@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/inflater_player_invite_team_row_item_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#121921"
+        android:padding="10dp">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/inflater_player_invite_request_approval_row_item_iv_team"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            app:civ_border_color="#EEEEEE"
+            app:civ_border_width="1dp"
+            app:civ_shadow_color="#8BC34A"
+            android:src="@drawable/profiledefaultimg"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toEndOf="@id/inflater_player_invite_request_approval_row_item_iv_team"
+            android:layout_toLeftOf="@+id/inflater_player_invite_request_approval_row_item_ll"
+            android:layout_toRightOf="@id/inflater_player_invite_request_approval_row_item_iv_team"
+            android:layout_toStartOf="@+id/inflater_player_invite_request_approval_row_item_ll"
+            android:orientation="vertical">
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_player_invite_request_approval_row_item_tv_name"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:textColor="@color/white"
+                android:maxLines="1"
+                android:ellipsize="end"
+                customui:medium="roboto_regular.ttf" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_player_invite_request_approval_row_item_tv_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:textColor="@color/white"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textSize="@dimen/dp_12"
+                customui:medium="roboto_regular.ttf" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/inflater_player_invite_request_approval_row_item_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            android:padding="2dp"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/inflater_player_invite_request_approval_row_item_iv_accept"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dp_12"
+                android:layout_margin="@dimen/dp_1"
+                android:src="@drawable/ic_tick_white" />
+
+            <ImageView
+                android:id="@+id/inflater_player_invite_request_approval_row_item_iv_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="@dimen/dp_12"
+                android:layout_margin="@dimen/dp_1"
+                android:src="@drawable/ic_close_white" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#283038" />
+</LinearLayout>

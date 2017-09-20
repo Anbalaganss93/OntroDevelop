@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_app_background"
+    tools:context="com.ontro.ScoreUpdateBasketballActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/parent_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="90dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/toolbar_color">
+
+                <ImageView
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:clickable="true"
+                    android:contentDescription="@null"
+                    android:onClick="CloseScoreUpdateActivity"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_back_arrow" />
+
+                <com.ontro.customui.RegularTextView
+                    android:id="@+id/tv_score_update_tv_title"
+                    style="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/btn_back"
+                    android:layout_toEndOf="@+id/btn_back"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/score_update"
+                    android:textColor="@color/white"
+                    app:medium="roboto_regular.ttf" />
+
+                <ImageView
+                    android:id="@+id/score_update_iv_flag_match"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:padding="10dp"
+                    android:src="@drawable/report"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/game_header_layout" />
+
+            <LinearLayout
+                android:id="@+id/total_score_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/quarter_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/btn_set_reset"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/btn_reset_set"
+                        tools:ignore="contentDescription" />
+
+                    <ImageButton
+                        android:id="@+id/btn_add"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/btn_add_set"
+                        tools:ignore="contentDescription" />
+
+                    <ImageButton
+                        android:id="@+id/btn_set_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/btn_close_set"
+                        tools:ignore="contentDescription" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_score_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:orientation="horizontal">
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/tv_q1"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/score_bg_selector"
+                        android:gravity="center"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="4dp"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:textColor="@color/white"
+                        app:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/tv_update_quarter_dropdown"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="15dp"
+                        android:background="@drawable/set_bg_drawable_selected"
+                        android:drawableEnd="@drawable/down_arr"
+                        android:drawablePadding="2dp"
+                        android:drawableRight="@drawable/down_arr"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingBottom="3dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="3dp"
+                        android:text="@string/_1q"
+                        android:textAllCaps="true"
+                        android:textColor="@color/black"
+                        app:medium="roboto_regular.ttf" />
+
+                    <View
+                        android:layout_width="@dimen/divider_height"
+                        android:layout_height="16dp"
+                        android:layout_centerHorizontal="true"
+                        android:background="@color/text_normal" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/tv_q2"
+                        android:layout_width="45dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/score_bg_selector"
+                        android:gravity="center"
+                        android:paddingBottom="5dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="5dp"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:textColor="@color/white"
+                        app:medium="roboto_regular.ttf" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layout_bonus_scores"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/tv_1p"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/_1p"
+                        android:textAllCaps="false"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:textColor="@color/text_normal"
+                        app:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_toLeftOf="@+id/tv_1p"
+                        android:layout_toStartOf="@+id/tv_1p"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/_2p"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:textColor="@color/text_normal"
+                        app:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_toLeftOf="@+id/textView2"
+                        android:layout_toStartOf="@+id/textView2"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="@string/_3p"
+                        android:textAppearance="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:textColor="@color/text_normal"
+                        app:medium="roboto_regular.ttf" />
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/list_players"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    app:layoutManager="LinearLayoutManager" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="25dp"
+        android:background="@drawable/score_update_btn_background"
+        android:enabled="false"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        android:visibility="visible" />
+</FrameLayout>

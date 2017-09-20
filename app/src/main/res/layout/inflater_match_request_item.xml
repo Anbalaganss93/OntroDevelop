@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_10"
+    android:orientation="vertical">
+
+    <com.daimajia.swipe.SwipeLayout
+        android:id="@+id/inflater_match_request_item_swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:clickToClose="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/inflater_match_request_item_ll_reject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:background="@color/match_request_reject_color">
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_match_request_item_tv_reject"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="@dimen/dp_80"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:gravity="center"
+                android:text="@string/reject"
+                android:textColor="@color/white"
+                android:drawablePadding="@dimen/dp_5"
+                android:drawableTop="@drawable/ic_close_white"
+                customui:medium="roboto_regular.ttf"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/inflater_match_request_item_ll_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.6"
+            android:background="@color/match_request_accept_color">
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_match_request_item_tv_accept"
+                android:layout_width="@dimen/dp_80"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/dp_10"
+                android:layout_marginStart="@dimen/dp_10"
+                android:gravity="center"
+                android:text="@string/accept"
+                android:textColor="@color/white"
+                android:drawablePadding="@dimen/dp_5"
+                android:drawableTop="@drawable/ic_tick_white"
+                customui:medium="roboto_regular.ttf" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/inflater_match_request_ll_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:clickable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/match_request_color">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_1"
+                android:background="@color/white_50" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_match_request_tv_request_time"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:layout_marginRight="@dimen/dp_15"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:textColor="@color/secundaryTextColor"
+                customui:medium="roboto_regular.ttf" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10" >
+
+                <LinearLayout
+                    android:id="@+id/inflater_match_request_ll_team_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/inflater_match_request_ll_date_and_time_container"
+                    android:layout_toStartOf="@+id/inflater_match_request_ll_date_and_time_container"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/inflater_match_request_ll_opponent_team"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/dp_2_5"
+                        android:paddingTop="@dimen/dp_5">
+
+                        <com.ontro.customui.ProfileImageView
+                            android:id="@+id/inflater_match_request_item_iv_opponent_team"
+                            android:layout_width="@dimen/dp_30"
+                            android:layout_height="@dimen/dp_30"/>
+
+                        <com.ontro.customui.RegularTextView
+                            android:id="@+id/inflater_match_request_item_tv_opponent_team_name"
+                            style="@android:style/TextAppearance.DeviceDefault.Small"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dp_7"
+                            android:layout_marginRight="@dimen/dp_3"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:textAllCaps="true"
+                            android:textColor="@color/primaryTextColor"
+                            customui:medium="roboto_bold.ttf" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/inflater_match_request_ll_my_team"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:paddingBottom="@dimen/dp_5"
+                        android:paddingTop="@dimen/dp_2_5">
+
+                        <com.ontro.customui.ProfileImageView
+                            android:id="@+id/inflater_match_request_item_iv_my_team"
+                            android:layout_width="@dimen/dp_30"
+                            android:layout_height="@dimen/dp_30"/>
+
+                        <com.ontro.customui.RegularTextView
+                            android:id="@+id/inflater_match_request_item_tv_my_team_name"
+                            style="@android:style/TextAppearance.DeviceDefault.Small"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/dp_7"
+                            android:layout_marginRight="@dimen/dp_3"
+                            android:ellipsize="end"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:textAllCaps="true"
+                            android:textColor="@color/secundaryTextColor"
+                            customui:medium="roboto_bold.ttf" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/inflater_match_request_ll_date_and_time_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="end"
+                        android:orientation="vertical">
+
+                        <com.ontro.customui.RegularTextView
+                            android:id="@+id/inflater_match_request_item_tv_match_date"
+                            style="@android:style/TextAppearance.DeviceDefault.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:layout_gravity="end"
+                            android:gravity="end"
+                            android:maxLines="1"
+                            android:padding="@dimen/dp_5"
+                            android:textAllCaps="true"
+                            android:maxWidth="@dimen/dp_160"
+                            android:textColor="@color/light_yellow"
+                            customui:medium="roboto_bold.ttf" />
+
+                        <com.ontro.customui.RegularTextView
+                            android:id="@+id/inflater_match_request_item_tv_match_time"
+                            style="@android:style/TextAppearance.DeviceDefault.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:gravity="end"
+                            android:maxLines="1"
+                            android:padding="@dimen/dp_5"
+                            android:textAllCaps="true"
+                            android:maxWidth="@dimen/dp_160"
+                            android:textColor="@color/primaryTextColor"
+                            customui:medium="roboto_bold.ttf" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="@dimen/dp_0_5"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/dp_5"
+                        android:layout_marginRight="@dimen/dp_9"
+                        android:background="@color/white" />
+
+                    <ImageView
+                        android:id="@+id/inflater_match_request_item_iv_match_sport_type"
+                        android:layout_width="@dimen/dp_24"
+                        android:layout_height="@dimen/dp_24"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/sports"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0_1"
+                android:background="@color/white_50" />
+
+        </LinearLayout>
+
+
+    </com.daimajia.swipe.SwipeLayout>
+
+</RelativeLayout>

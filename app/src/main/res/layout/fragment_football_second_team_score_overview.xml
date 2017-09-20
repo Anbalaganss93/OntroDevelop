@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:elevation="@dimen/dp_2"
+            card_view:cardBackgroundColor="@color/blue_69"
+            card_view:cardCornerRadius="@dimen/dp_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_football_score_base">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@drawable/bg_football_score"
+                        android:weightSum="1">
+
+                        <com.ontro.customui.RegularTextView
+                            style="@android:style/TextAppearance.DeviceDefault.Small"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.4"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:padding="@dimen/dp_10"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:text="@string/players"
+                            android:textAllCaps="false"
+                            android:textColor="@color/dark_red"
+                            customui:medium="roboto_regular.ttf" />
+
+                        <com.ontro.customui.RegularTextView
+                            style="@android:style/TextAppearance.DeviceDefault.Small"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:padding="@dimen/dp_10"
+                            android:text="@string/goals"
+                            android:textAllCaps="false"
+                            android:textColor="@color/color_cement"
+                            customui:medium="roboto_regular.ttf" />
+
+                        <com.ontro.customui.RegularTextView
+                            style="@android:style/TextAppearance.DeviceDefault.Small"
+                            android:layout_width="@dimen/dp_0"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.3"
+                            android:gravity="center"
+                            android:maxLines="1"
+                            android:padding="@dimen/dp_10"
+                            android:text="@string/assists"
+                            android:textAllCaps="false"
+                            android:textColor="@color/color_cement"
+                            customui:medium="roboto_regular.ttf" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_1"
+                        android:background="@color/blue_105" />
+
+                    <TableLayout
+                        android:id="@+id/fragment_football_second_team_score_overview_tl_players"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/dp_10" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/app_background_color">
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/fragment_football_second_team_score_overview_tv_more"
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_5"
+                        android:text="@string/more_player"
+                        android:textColor="@color/color_cement"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:drawableEnd="@drawable/down_arr"
+                        android:drawableRight="@drawable/down_arr"
+                        android:drawablePadding="@dimen/dp_5"
+                        customui:medium="roboto_regular.ttf"/>
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/fragment_football_second_team_score_overview_tv_less"
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/dp_5"
+                        android:text="@string/less_player"
+                        android:textColor="@color/color_cement"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:drawableEnd="@drawable/up_arr_white"
+                        android:drawableRight="@drawable/up_arr_white"
+                        android:drawablePadding="@dimen/dp_5"
+                        customui:medium="roboto_regular.ttf"
+                        android:visibility="gone"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

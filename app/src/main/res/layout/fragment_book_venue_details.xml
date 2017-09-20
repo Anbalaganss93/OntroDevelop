@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:paddingBottom="10dp">
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/fragment_book_venue_details_tv_title"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:clickable="true"
+            android:drawablePadding="5dp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:text="@string/book_venue"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint_color"
+            customui:medium="roboto_regular.ttf" />
+
+        <TextView
+            android:id="@+id/fragment_book_venue_details_tv_match_type"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/login_edittext_bg"
+            android:drawableLeft="@drawable/ic_sport_type"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/ic_sport_type"
+            android:gravity="center_vertical"
+            android:hint="@string/inv_matchtype"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint_color"
+            android:focusable="false"
+            android:clickable="true"
+            android:focusableInTouchMode="false"/>
+
+        <TextView
+            android:id="@+id/fragment_book_venue_details_tv_match_location"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/login_edittext_bg"
+            android:drawableLeft="@drawable/location"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/location"
+            android:gravity="center_vertical"
+            android:hint="@string/inv_location"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint_color"
+            android:focusable="false"
+            android:clickable="true"
+            android:focusableInTouchMode="false"/>
+
+        <TextView
+            android:id="@+id/fragment_book_venue_details_tv_match_date"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/login_edittext_bg"
+            android:drawableLeft="@drawable/calendar"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/calendar"
+            android:gravity="center_vertical"
+            android:hint="@string/inv_matchdate"
+            android:maxLines="1"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/hint_color"
+            android:focusable="false"
+            android:clickable="true"
+            android:focusableInTouchMode="false"/>
+
+        <Button
+            android:id="@+id/fragment_book_venue_details_btn_get_venue"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginEnd="75dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginRight="75dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_bg_normal"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/get_venue"
+            android:textAllCaps="true"
+            android:textAppearance="@android:style/TextAppearance.Small"
+            android:textColor="#ffffff" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_book_venue_details_rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            app:layout_empty="@layout/emptyview"
+            app:layout_moreProgress="@layout/view_more_progress"
+            app:mainLayoutId="@layout/layout_recyclerview_verticalscroll"
+            app:recyclerClipToPadding="false"
+            app:scrollbarStyle="insideOverlay" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

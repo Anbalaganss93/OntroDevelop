@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/location_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/location_dialogue_border"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/activity_explore_player_list_et_location_search"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/discussion_drawable_bg"
+            android:drawableLeft="@drawable/search_gray"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:hint="@string/search_location"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textColorHint="#737373"
+            android:visibility="visible" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/locationdata"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <com.ontro.customui.RegularTextView
+        android:id="@+id/activity_explore_player_list_tv_empty"
+        style="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/no_location"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        customui:medium="roboto_regular.ttf" />
+
+    <com.github.rahatarmanahmed.cpv.CircularProgressView
+        android:id="@+id/location_progress"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        app:cpv_animAutostart="true"
+        app:cpv_indeterminate="true" />
+
+</FrameLayout>

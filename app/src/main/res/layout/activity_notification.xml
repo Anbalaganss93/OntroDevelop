@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_app_background"
+    tools:context="com.ontro.NotificationActivity">
+
+    <LinearLayout
+        android:id="@+id/activity_notification_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_color">
+
+        <ImageView
+            android:id="@+id/activity_notification_back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:padding="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/activity_notification_title_tv"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:gravity="center_vertical"
+            android:text="@string/notification"
+            android:textColor="@color/white"
+            customui:medium="roboto_regular.ttf" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/activity_notification_rv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/activity_notification_toolbar"
+        app:layoutManager="LinearLayoutManager"
+        android:background="?attr/selectableItemBackground"/>
+
+    <com.ontro.customui.RegularTextView
+        android:id="@+id/activity_notification_tv_nil"
+        style="@android:style/TextAppearance.DeviceDefault.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:text="@string/no_notification_found"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        customui:medium="roboto_regular.ttf" />
+
+</RelativeLayout>

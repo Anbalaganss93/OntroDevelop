@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_17">
+
+            <ImageView
+                android:id="@+id/cricket_score_header_iv_sport_logo"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginStart="@dimen/_dp_10"
+                android:alpha="0.75"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_cricket_white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.ontro.customui.RegularTextView
+                    android:id="@+id/cricket_score_header_tv_match_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:alpha="0.75"
+                    android:drawableLeft="@drawable/ic_match_calender"
+                    android:drawablePadding="@dimen/dp_7"
+                    android:drawableStart="@drawable/ic_match_calender"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/game_header_text_lightgray"
+                    android:textSize="@dimen/dp_13"
+                    customui:medium="roboto_regular.ttf" />
+
+                <com.ontro.customui.RegularTextView
+                    android:id="@+id/cricket_score_header_tv_match_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:alpha="0.75"
+                    android:drawableLeft="@drawable/ic_venue_map_pointer"
+                    android:drawablePadding="@dimen/dp_7"
+                    android:drawableStart="@drawable/ic_venue_map_pointer"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/game_header_text_lightgray"
+                    android:textSize="@dimen/dp_13"
+                    customui:medium="roboto_regular.ttf" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_7">
+
+            <FrameLayout
+                android:id="@+id/gamescore_indicator_container1"
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="wrap_content">
+
+                <com.ontro.customui.ProfileImageView
+                    android:id="@+id/cricket_score_header_iv_first_team_logo"
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_height="@dimen/dp_70"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    app:paddingStart="@dimen/dp_0" />
+
+                <ImageView
+                    android:id="@+id/cricket_score_header_iv_first_team_score_update_status"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_gravity="right|top"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:contentDescription="@null"
+                    android:src="@drawable/tickicon"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/gamescore_indicator_container2"
+                android:layout_width="@dimen/dp_70"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true">
+
+                <com.ontro.customui.ProfileImageView
+                    android:id="@+id/cricket_score_header_iv_second_team_logo"
+                    android:layout_width="@dimen/dp_70"
+                    android:layout_height="@dimen/dp_70"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    app:paddingStart="@dimen/dp_0" />
+
+                <ImageView
+                    android:id="@+id/cricket_score_header_iv_second_team_score_update_status"
+                    android:layout_width="@dimen/dp_25"
+                    android:layout_height="@dimen/dp_25"
+                    android:layout_gravity="left|top"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:contentDescription="@null"
+                    android:src="@drawable/tickicon"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/gamescore_indicator_container1"
+                android:layout_toLeftOf="@id/gamescore_indicator_container2"
+                android:layout_toRightOf="@id/gamescore_indicator_container1"
+                android:layout_toStartOf="@id/gamescore_indicator_container2">
+
+                <com.ontro.customui.RegularTextView
+                    android:id="@+id/cricket_score_header_tv_team_vs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:background="@drawable/vs_circledrawable"
+                    android:padding="@dimen/dp_7"
+                    android:text="@string/vs"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/dp_10"
+                    customui:medium="roboto_regular.ttf" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_9"
+                    android:layout_marginStart="@dimen/dp_9"
+                    android:layout_toLeftOf="@id/cricket_score_header_tv_team_vs"
+                    android:layout_toStartOf="@+id/cricket_score_header_tv_team_vs"
+                    android:orientation="vertical">
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/cricket_score_header_tv_first_team_batting_innings"
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|start"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_cement"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/cricket_score_header_tv_first_team_total_score"
+                        style="@android:style/TextAppearance.DeviceDefault.Large"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|start"
+                        android:text="0/0"
+                        android:textColor="@color/white"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/cricket_score_header_tv_first_team_total_overs"
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|start"
+                        android:text="0 overs"
+                        android:textColor="@color/color_cement"
+                        customui:medium="roboto_regular.ttf" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_9"
+                    android:layout_marginRight="@dimen/dp_9"
+                    android:layout_toEndOf="@+id/cricket_score_header_tv_team_vs"
+                    android:layout_toRightOf="@id/cricket_score_header_tv_team_vs"
+                    android:orientation="vertical">
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/cricket_score_header_tv_second_team_batting_innings"
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|end"
+                        android:textAllCaps="true"
+                        android:textColor="@color/color_cement"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/cricket_score_header_tv_second_team_total_score"
+                        style="@android:style/TextAppearance.DeviceDefault.Large"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|end"
+                        android:text="0/0"
+                        android:textColor="@color/white"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/cricket_score_header_tv_second_team_total_overs"
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical|end"
+                        android:text="0 overs"
+                        android:textColor="@color/color_cement"
+                        customui:medium="roboto_regular.ttf" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_5"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/cricket_score_header_rl_first_team_header"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingRight="@dimen/dp_5">
+
+                <ImageView
+                    android:id="@+id/cricket_score_header_iv_first_team_won_indicator"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/dp_2"
+                    android:src="@drawable/greendot"
+                    android:visibility="gone" />
+
+                <com.ontro.customui.MediumTextView
+                    android:id="@+id/cricket_score_header_tv_first_team_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_toEndOf="@id/cricket_score_header_iv_first_team_won_indicator"
+                    android:layout_toRightOf="@id/cricket_score_header_iv_first_team_won_indicator"
+                    android:ellipsize="end"
+                    android:gravity="left"
+                    android:maxLines="1"
+                    android:textAllCaps="true"
+                    android:textColor="@color/game_header_team_name_color"
+                    android:textSize="@dimen/dp_13"
+                    customui:semibold="roboto_medium.ttf" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/dp_5">
+
+                <ImageView
+                    android:id="@+id/cricket_score_header_iv_second_team_won_indicator"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/dp_2"
+                    android:src="@drawable/greendot"
+                    android:visibility="gone" />
+
+                <com.ontro.customui.MediumTextView
+                    android:id="@+id/cricket_score_header_tv_second_team_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/cricket_score_header_iv_second_team_won_indicator"
+                    android:layout_toStartOf="@+id/cricket_score_header_iv_second_team_won_indicator"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:textAllCaps="true"
+                    android:textColor="@color/game_header_team_name_color"
+                    android:textSize="@dimen/dp_13"
+                    customui:semibold="roboto_medium.ttf" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/game_header_team_name_color_25" />
+
+    <com.ontro.customui.RegularTextView
+        android:id="@+id/cricket_score_header_tv_team_score_update_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_5"
+        android:gravity="center"
+        android:padding="@dimen/dp_5"
+        android:textColor="@color/white"
+        android:textSize="@dimen/dp_13"
+        customui:medium="roboto_regular.ttf" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/game_header_team_name_color_25" />
+
+</LinearLayout>

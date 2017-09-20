@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/fragment_profile_record_rl_level"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_70"
+                    android:layout_margin="@dimen/dp_10"
+                    android:background="@drawable/discussion_drawable_bg"
+                    android:visibility="gone">
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/fragment_profile_record_progress_stage"
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:drawablePadding="@dimen/dp_5"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/dp_10"
+                        android:text="@string/player_gold_level"
+                        android:textColor="@color/white"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <ImageView
+                        android:id="@+id/fragment_profile_record_badge"
+                        android:layout_width="@dimen/dp_40"
+                        android:layout_height="@dimen/dp_40"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_10"
+                        android:src="@drawable/badge"
+                        android:visibility="gone" />
+
+                    <ProgressBar
+                        android:id="@+id/fragment_profile_record_pb_level"
+                        style="@android:style/Widget.ProgressBar.Horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/dp_5"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/dp_0_3"
+                        android:layout_marginLeft="@dimen/dp_1_5"
+                        android:layout_marginRight="@dimen/dp_1_5"
+                        android:progress="0" />
+
+                </RelativeLayout>
+
+                <TableLayout
+                    android:id="@+id/fragment_profile_record_tl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10"
+                    android:background="@drawable/discussion_drawable_bg" />
+
+                <com.github.rahatarmanahmed.cpv.CircularProgressView
+                    android:id="@+id/fragment_profile_record_progress_view"
+                    android:layout_width="@dimen/dp_40"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    app:cpv_animAutostart="true"
+                    app:cpv_indeterminate="true" />
+
+            </LinearLayout>
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/fragment_player_profile_record_tv_no_record"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/no_record_found"
+                android:textColor="@color/white"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

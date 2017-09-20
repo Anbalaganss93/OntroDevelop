@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/inflater_team_squad_item_rl_chat_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/inflater_team_squad_item_iv_player"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            app:civ_border_color="#0000ffff"
+            app:civ_border_width="0.5dp" />
+
+        <LinearLayout
+            android:id="@+id/squad_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toEndOf="@id/inflater_team_squad_item_iv_player"
+            android:layout_toRightOf="@id/inflater_team_squad_item_iv_player"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.ontro.customui.RegularTextView
+                    android:id="@+id/inflater_team_squad_item_tv_player_name"
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:layout_toLeftOf="@+id/inflater_team_squad_item_tv_player_role"
+                    customui:medium="roboto_regular.ttf" />
+
+                <com.ontro.customui.RegularTextView
+                    android:id="@+id/inflater_team_squad_item_tv_player_role"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#638BAA"
+                    android:textSize="@dimen/dp_12"
+                    android:paddingLeft="@dimen/dp_5"
+                    android:paddingRight="@dimen/dp_5"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    customui:medium="roboto_regular.ttf" />
+
+            </RelativeLayout>
+
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_team_squad_item_tv_player_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_12"
+                customui:medium="roboto_regular.ttf" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#283038" />
+
+    </LinearLayout>
+
+</RelativeLayout>

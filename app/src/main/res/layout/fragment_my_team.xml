@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragment_my_team_swipe_container"
+    tools:context="com.ontro.fragments.MyTeamFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/activity_my_team"
+        android:background="@android:color/transparent"
+        android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_my_team_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingBottom="10dp" />
+
+        <RelativeLayout
+            android:id="@+id/fragment_my_team_rl_empty_team"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@string/app_icon"
+                android:src="@drawable/ic_app_logo" />
+
+            <com.ontro.customui.RegularTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/get_started_with_your_own_team_today"
+                android:textColor="@color/color_cement"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/dp_5"
+                android:lineSpacingMultiplier="1.2"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                customui:medium="roboto_regular.ttf" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/fragment_my_team_btn_create_team"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/button_bg_normal"
+                android:padding="10dp"
+                android:text="@string/create_team"
+                android:textAllCaps="true"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="#ffffff" />
+        </RelativeLayout>
+
+        <com.github.rahatarmanahmed.cpv.CircularProgressView
+            android:id="@+id/fragment_my_team_progress_view"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:cpv_animAutostart="true"
+            app:cpv_indeterminate="true" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fragment_my_team_fab_create_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="16dp"
+            android:layout_marginRight="16dp"
+            app:backgroundTint="@color/button_bg_color"
+            app:elevation="6dp"
+            android:src="@drawable/plus"
+            app:pressedTranslationZ="12dp"
+            android:visibility="visible"/>
+
+    </FrameLayout>
+
+    </LinearLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout><!--android:background="#172029"-->

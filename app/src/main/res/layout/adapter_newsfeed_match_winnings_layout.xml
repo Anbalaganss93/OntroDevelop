@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <RelativeLayout
+        android:id="@+id/matches_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/discussion_drawable_bg"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/wonimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/won_icon" />
+
+        <ImageView
+            android:id="@+id/looseimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:paddingRight="3dp"
+            android:src="@drawable/loose_icon" />
+
+        <RelativeLayout
+            android:id="@+id/team_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/wonimage"
+            android:layout_toLeftOf="@id/looseimage"
+            android:layout_toRightOf="@id/wonimage"
+            android:layout_toStartOf="@id/looseimage">
+
+            <LinearLayout
+                android:id="@+id/date_container"
+                android:layout_width="37dp"
+                android:layout_height="37dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/circledrawable"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="2dp">
+
+                <ImageView
+                    android:id="@+id/batch"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/calendar" />
+
+                <com.ontro.customui.RegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    android:textSize="9sp"
+                    customui:medium="roboto_regular.ttf" />
+
+            </LinearLayout>
+
+            <com.ontro.customui.RegularTextView
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/date_container"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="Final"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                customui:medium="roboto_regular.ttf" />
+
+            <LinearLayout
+                android:id="@+id/left_team_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/date_container"
+                android:layout_toStartOf="@id/date_container"
+                android:orientation="vertical"
+                android:paddingTop="7dp">
+
+                <com.ontro.customui.RegularTextView
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    customui:medium="roboto_regular.ttf" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/left_batch_container"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/leftside_score_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.ontro.customui.RegularTextView
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/left_scores"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/left_overs"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/white"
+                        android:textSize="11dp"
+                        customui:medium="roboto_regular.ttf" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/right_team_container"
+                android:layout_toEndOf="@id/date_container"
+                android:layout_toRightOf="@id/date_container"
+                android:alpha="0.3"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingTop="7dp">
+
+                <com.ontro.customui.RegularTextView
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical|right"
+                    android:textColor="@color/white"
+                    customui:medium="roboto_regular.ttf" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/right_batch_container"
+                    android:gravity="center_vertical|right"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/right_scores"
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:gravity="center_vertical|right"
+                        android:textColor="@color/white"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/right_overs"
+                        android:gravity="center_vertical|right"
+                        android:textColor="@color/white"
+                        android:textSize="11sp"
+                        customui:medium="roboto_regular.ttf" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <com.ontro.customui.RegularTextView
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/team_container"
+            android:layout_alignLeft="@id/team_container"
+            android:layout_alignRight="@id/team_container"
+            android:layout_alignStart="@id/team_container"
+            android:layout_below="@id/team_container"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/white"
+            customui:medium="roboto_regular.ttf" />
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="1dp"
+        android:id="@+id/game_image"
+        android:layout_alignBottom="@id/matches_container"
+        android:layout_alignEnd="@id/matches_container"
+        android:layout_alignParentRight="true"
+        android:layout_alignRight="@id/matches_container"
+       />
+</RelativeLayout>

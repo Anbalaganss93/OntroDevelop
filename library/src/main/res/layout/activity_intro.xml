@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/mi_frame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/introbackground"
+    android:orientation="vertical">
+
+    <com.heinrichreimersoftware.materialintro.view.FadeableViewPager
+        android:id="@id/mi_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@id/mi_button_skip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@drawable/button_background"
+            android:contentDescription="@string/mi_content_description_back"
+            android:src="@drawable/ic_skip"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mi_baseline_half"
+            android:orientation="vertical">
+
+
+            <com.heinrichreimersoftware.materialintro.view.InkPageIndicator
+                android:id="@id/mi_pager_indicator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="70dp"
+                app:dotDiameter="10dp"
+                app:dotGap="@dimen/mi_baseline_half" />
+
+            <TextSwitcher
+                android:id="@id/mi_button_cta"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/mi_button_cta_height"
+                android:layout_gravity="center_horizontal"
+                android:clipChildren="false">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="#676767"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:text="@string/mi_label_button_cta"
+                    android:textColor="?android:textColorPrimaryInverse"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:background="#676767"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:text="@string/mi_label_button_cta"
+                    android:textColor="?android:textColorPrimaryInverse" />
+
+            </TextSwitcher>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@id/mi_button_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@drawable/button_background"
+            android:contentDescription="@string/mi_content_description_next"
+            android:src="@drawable/ic_next_finish"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout>

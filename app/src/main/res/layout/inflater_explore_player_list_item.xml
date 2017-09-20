@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/inflater_explore_player_list_item_rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#121921"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/inflater_explore_player_list_item_iv_player"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:civ_border_color="#EEEEEE"
+            app:civ_border_width="1dp"
+            android:layout_centerVertical="true"
+            app:civ_shadow_color="#8BC34A" />
+
+        <RelativeLayout
+            android:id="@+id/inflater_explore_player_list_item_rl_invite_status"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <com.ontro.customui.MediumTextView
+                android:id="@+id/inflater_explore_player_list_item_tv_player_invite_or_cancel"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="13dp"
+                android:layout_marginRight="@dimen/dp_10"
+                android:background="@drawable/bg_player_invite"
+                android:elevation="@dimen/dp_2"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:padding="@dimen/dp_7"
+                android:text="@string/invite"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/dp_16"
+                android:visibility="gone"
+                customui:semibold="roboto_regular.ttf" />
+
+            <ImageView
+                android:id="@+id/inflater_explore_player_list_item_iv_player_exist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_player_exist"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_5"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:visibility="gone"
+                android:contentDescription="@string/player_exist"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/inflater_explore_player_list_item_ll_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_toEndOf="@id/inflater_explore_player_list_item_iv_player"
+            android:layout_toLeftOf="@id/inflater_explore_player_list_item_rl_invite_status"
+            android:layout_toRightOf="@id/inflater_explore_player_list_item_iv_player"
+            android:layout_toStartOf="@id/inflater_explore_player_list_item_rl_invite_status"
+            android:orientation="vertical">
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_explore_player_list_item_tv_name"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_explore_player_list_item_tv_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/location_new"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                customui:medium="roboto_regular.ttf" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_explore_player_list_item_tv_sport"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="5dp"
+                android:textColor="@color/today_border"
+                customui:medium="roboto_regular.ttf" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/explore_container"
+        android:background="#283038" />
+</RelativeLayout>

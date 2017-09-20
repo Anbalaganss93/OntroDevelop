@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:customui="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="fill_vertical"
+        android:fillViewport="true"
+        android:isScrollContainer="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/match_detail_ll_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:id="@+id/container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical"
+                    android:paddingTop="10dp">
+
+                    <com.ontro.customui.RegularTextView
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="10dp"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/type_of_match"
+                        android:textAllCaps="false"
+                        android:textColor="#737272"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/match_detail_info_tv_matchtype"
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="20dp"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/date_amp_time"
+                        android:textAllCaps="false"
+                        android:textColor="#737272"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/match_detail_info_tv_date"
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="20dp"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/venue"
+                        android:textAllCaps="false"
+                        android:textColor="#737272"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/match_detail_info_tv_venuedetail"
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/match_detail_info_tv_amounttitle"
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="20dp"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/venue_amount"
+                        android:textAllCaps="false"
+                        android:textColor="#737272"
+                        android:visibility="gone"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/match_detail_info_tv_venueamount"
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:visibility="gone"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="20dp"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/opponent_team"
+                        android:textAllCaps="false"
+                        android:textColor="#737272"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/match_detail_info_tv_opponentteam"
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="20dp"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="@string/status"
+                        android:textAllCaps="false"
+                        android:textColor="#737272"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/match_detail_info_tv_status"
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="150dp"
+                        android:gravity="bottom"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/friends_chat"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/login_edittext_bg"
+                            android:padding="10dp"
+                            android:text="@string/chat_with_opponent"
+                            android:textAllCaps="false"
+                            android:textAppearance="@android:style/TextAppearance.Small"
+                            android:textColor="#ffffff" />
+
+                        <Button
+                            android:id="@+id/match_request_scoreupdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/button_bg_normal"
+                            android:text="@string/score_update"
+                            android:textAllCaps="false"
+                            android:textAppearance="@android:style/TextAppearance.Small"
+                            android:textColor="#ffffff"
+                            android:visibility="visible" />
+
+                        <Button
+                            android:id="@+id/Accept_request_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/button_bg_normal"
+                            android:padding="10dp"
+                            android:text="@string/accept_request"
+                            android:textAllCaps="false"
+                            android:textAppearance="@android:style/TextAppearance.Small"
+                            android:textColor="#ffffff"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/request_status"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/button_bg_normal"
+                            android:padding="10dp"
+                            android:text="@string/cancel_request"
+                            android:textAllCaps="false"
+                            android:textAppearance="@android:style/TextAppearance.Small"
+                            android:textColor="#ffffff"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/request_booking"
+                            android:layout_width="match_parent"
+                            android:layout_height="42dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginEnd="15dp"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/button_bg_normal"
+                            android:padding="10dp"
+                            android:text="@string/paymentbooking"
+                            android:textAllCaps="false"
+                            android:textAppearance="@android:style/TextAppearance.Small"
+                            android:textColor="#ffffff"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

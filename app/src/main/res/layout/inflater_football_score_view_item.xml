@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.4"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/inflater_football_score_view_item_iv_goal_keeper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_12_5"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingLeft="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_2_5"
+                android:src="@drawable/ic_football_golf"/>
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_football_score_view_item_tv_player_name"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:paddingLeft="@dimen/dp_2_5"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf" />
+
+        </LinearLayout>
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/inflater_football_score_view_item_tv_player_goals"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="@dimen/dp_10"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            customui:medium="roboto_regular.ttf" />
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/inflater_football_score_view_item_tv_player_assists"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:maxLines="1"
+            android:padding="@dimen/dp_10"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            customui:medium="roboto_regular.ttf" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

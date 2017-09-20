@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "255008106988",
+    "firebase_url": "https://ontro-development-180014.firebaseio.com",
+    "project_id": "ontro-development-180014",
+    "storage_bucket": "ontro-development-180014.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:255008106988:android:5d3f2cd74024276a",
+        "android_client_info": {
+          "package_name": "com.ontro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "255008106988-98ji0paalobmnn4g5j9ui1tj17drb442.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCbQs-GIBMBRchWbWR6wvB20EQzJEbJPc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

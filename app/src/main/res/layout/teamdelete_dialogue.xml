@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        customui:cardBackgroundColor="@color/teambg"
+        customui:cardCornerRadius="7dp"
+        customui:cardElevation="5dp">
+
+        <LinearLayout
+            android:id="@+id/logout_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingTop="15dp">
+
+            <LinearLayout
+                android:id="@+id/team_delete_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/_dp_10"
+                android:visibility="visible">
+
+                <com.ontro.customui.RegularTextView
+                    android:id="@+id/title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal"
+                    android:padding="0dp"
+                    android:text="@string/teamdelete"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="@color/white"
+                    android:visibility="gone"
+                    customui:medium="roboto_regular.ttf" />
+
+                <Button
+                    android:id="@+id/myteam_bt_teamdelete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/alertdrawable"
+                    android:paddingEnd="@dimen/dp_15"
+                    android:paddingLeft="@dimen/dp_15"
+                    android:paddingRight="@dimen/dp_15"
+                    android:paddingStart="@dimen/dp_15"
+                    android:text="@string/delete_team"
+                    android:textAllCaps="true"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/deleteplayer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:gravity="center_horizontal"
+                android:text="@string/exitteam"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                customui:medium="roboto_regular.ttf" />
+
+            <Button
+                android:id="@+id/myteam_bt_teamexit"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/alertdrawable"
+                android:padding="5dp"
+                android:paddingEnd="@dimen/dp_15"
+                android:paddingLeft="@dimen/dp_15"
+                android:paddingRight="@dimen/dp_15"
+                android:paddingStart="@dimen/dp_15"
+                android:text="@string/exit_from_this_team"
+                android:textAllCaps="true"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <com.ontro.customui.RegularTextView
+                    android:id="@+id/no"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="@string/no"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/white"
+                    customui:medium="roboto_regular.ttf" />
+
+                <com.ontro.customui.RegularTextView
+                    android:id="@+id/yes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:text="@string/yes"
+                    android:textAppearance="@android:style/TextAppearance.Medium"
+                    android:textColor="@color/white"
+                    customui:medium="roboto_regular.ttf" />
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

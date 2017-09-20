@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal">
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/game_score_set"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            customui:medium="roboto_regular.ttf" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/game_score_stat_teamone"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/game_score_update_ed_drawable"
+                android:gravity="center"
+                android:maxLength="3"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/light_white"
+                customui:medium="roboto_regular.ttf" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/game_score_stat_teamtwo"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="55dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/game_score_update_ed_drawable"
+                android:gravity="center"
+                android:maxLength="3"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/light_white"
+                customui:medium="roboto_regular.ttf" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

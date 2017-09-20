@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <com.malinskiy.superrecyclerview.SuperRecyclerView
+            android:id="@+id/discussion_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:scrollbarSize="0dp"
+            android:scrollbars="none"
+            android:visibility="visible"
+            app:layout_empty="@layout/emptyview"
+            app:mainLayoutId="@layout/layout_recyclerview_verticalscroll"
+            app:recyclerClipToPadding="false"
+            app:scrollbarStyle="insideOverlay" />
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/activity_explore_player_list_tv_empty"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/nostream"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            customui:medium="roboto_regular.ttf" />
+
+        <com.github.rahatarmanahmed.cpv.CircularProgressView
+            android:id="@+id/activity_explore_player_list_progress_view"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:cpv_animAutostart="true"
+            app:cpv_indeterminate="true" />
+
+    </FrameLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>

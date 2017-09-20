@@ -1,0 +1,428 @@
+<resources>
+    <string name="app_name">Ontro</string>
+    <string name="get_start">Get Started</string>
+    <string name="login">Login</string>
+
+    <!--login page-->
+    <string name="login_forgotpassword">Forgot Password?</string>
+    <string name="Login_button">Log In</string>
+    <string name="connect_text">OR CONNECT WITH</string>
+    <string name="google_button">Google</string>
+    <string name="facebook_button">Facebook</string>
+    <string name="singup_button">Sign Up</string>
+
+    <!--OTP page-->
+    <string name="submit">Submit</string>
+    <string name="resend">Resend OTP</string>
+
+    <!--sport page-->
+    <string name="save_continue">save &amp; continue</string>
+    <string name="viewprofile">View Profile</string>
+
+    <!--Myteam-->
+    <string name="personal">PERSONAL</string>
+    <string name="record">RECORDS</string>
+
+    <!--Filter-->
+    <string name="apply">apply</string>
+    <string name="cancel_request">Cancel Request</string>
+    <string name="accept_request">Accept Request</string>
+    <string name="paymentbooking">Booking</string>
+    <string name="chat_with_opponent">Chat With Opponent</string>
+    <string name="add">Add</string>
+    <string name="forgotbutton">send</string>
+    <string name="facebook_app_id">702025863341900</string>
+    <!--423239564846-hjpd21nhioafgrmlflcudqcuovkl03iv.apps.googleusercontent.com-->
+    <string name="mixpanel_token">90c45c4517c81fa71e95068a4c3ab552</string>
+
+    <string name="logout">"Are you sure to logout?"</string>
+    <string name="filteralert">"Are you want to apply filter?"</string>
+    <string name="resetalert">"Are you want to reset filter?"</string>
+
+    <!--Server error-->
+    <string name="timeout">Connection time out</string>
+
+    <!--sportname-->
+    <string name="football">Football</string>
+    <string name="cricket">Cricket</string>
+    <string name="tennis">Tennis</string>
+    <string name="basketball">Basketball</string>
+    <string name="badminton">Badminton</string>
+    <string name="volleyball">Volleyball</string>
+    <string name="carrom">Carrom</string>
+
+    <!--Book venue-->
+    <string name="booking">Confirm Booking</string>
+    <string name="amenities">Amenities</string>
+    <string name="facilities">Sporting facilities</string>
+    <string name="to">To</string>
+    <string name="from">From</string>
+    <string name="time_duration">Select your duration of play</string>
+    <string name="available_time">Available on: 8 am to 10 pm (Mon-sun)</string>
+    <string name="venue">Venue</string>
+    <string name="book_venue_name">Integer tincidunt</string>
+
+    <!--chat-->
+    <string name="chat_comment">Type your message…</string>
+    <string name="no_chat_history_found">No chat history</string>
+
+    <!--CreateTeam-->
+    <string name="create_team">Create your team</string>
+    <string name="team_name">Team Name</string>
+    <string name="sport">Sport</string>
+    <string name="locality">Locality</string>
+    <string name="team_info">Team Information</string>
+    <string name="upload_team_logo">Upload logo</string>
+    <string name="select_file">Select file</string>
+    <string name="explore_player">Explore Players</string>
+    <string name="no_location">No Location</string>
+    <string name="save">save</string>
+    <string name="next_arrow">Next arrow</string>
+    <string name="get_started_with_your_own_team_today">Get started with \n your own team today</string>
+    <string name="app_icon">App icon</string>
+
+    <!--Profile completion-->
+    <string name="pc_handedness">Handedness</string>
+    <string name="pc_position">Position</string>
+    <string name="pc_name">Name</string>
+    <string name="pc_contact">Contact No</string>
+    <string name="pc_dob">DOB</string>
+    <string name="pc_location">Location</string>
+    <string name="pc_city">City</string>
+    <string name="pc_height">Height</string>
+    <string name="pc_scale_height">centimeter *</string>
+    <string name="pc_next">NEXT</string>
+    <string name="pc_title1">Personal Details</string>
+    <string name="pc_title2">Sports</string>
+
+    <!--Invite team detail-->
+    <string name="inv_myteam">My team</string>
+    <string name="playertype">Player type</string>
+    <string name="inv_opponentteam">Opponent team</string>
+    <string name="inv_matchtype">Match type</string>
+    <string name="inv_location">Location</string>
+    <string name="inv_matchdate">Match date</string>
+    <string name="invitedetailtitle">Invite Details</string>
+    <string name="invitesend">Send</string>
+
+    <!--Match types-->
+    <string name="street">Street</string>
+    <string name="leak">League</string>
+    <string name="tournament">Tournament</string>
+
+    <!--Notification-->
+    <string name="notification">Notification</string>
+    <string name="no_notification_found">No New Notification</string>
+
+    <!--Player Quick View-->
+    <string name="player_gold_level">Level 1</string>
+    <string name="player_won">Won</string>
+    <string name="player_matches_played">Matches Played</string>
+    <string name="player_lost">Lost</string>
+    <string name="winner">Winner</string>
+    <string name="no_of_tournaments">No.Of Tournaments</string>
+    <string name="runner">Runner</string>
+    <string name="player_role">Batsman</string>
+    <string name="player_average">Average</string>
+    <string name="player_centuries">Centuries</string>
+    <string name="player_half_centuries">Half centuries</string>
+    <string name="player_mom">MOM</string>
+
+    <!--Player Personal Detail-->
+    <string name="personal_info">Personal Info</string>
+    <string name="birth_date">Birth date</string>
+    <string name="handedness">Handedness</string>
+    <string name="height">Height</string>
+    <string name="noplayer">No Players</string>
+    <string name="no_record_found">No record found</string>
+    <string name="nomatchrequest">No requested matches</string>
+    <string name="nomatchsheduled">No scheduled matches </string>
+    <string name="nomatchcompleted">No completed matches </string>
+    <string name="remove">Remove</string>
+    <string name="approve">Approve</string>
+    <string name="cancel">Cancel</string>
+    <string name="Single">Single</string>
+    <string name="team">Team</string>
+
+    <!--Player invite-->
+    <string name="no_team_found">No Teams</string>
+    <string name="back_navigation">Back Navigation</string>
+    <string name="select_team">Select Team</string>
+    <string name="accept_invite">Accept Request ?</string>
+    <string name="invited_by">Invited by</string>
+    <string name="no_invite_found">No invites</string>
+
+    <!--Team info-->
+    <string name="done">Done</string>
+    <string name="invite">Invite</string>
+    <string name="edit_team">Edit Team</string>
+    <string name="add_member">Add Member</string>
+    <string name="accept_schedule_match">Accept &amp; Schedule Match</string>
+    <string name="slide_to_invite_to_team">Slide to invite to team</string>
+    <string name="schedule_match">Schedule Match</string>
+
+    <!--Discussion-->
+    <string name="comments">Comments</string>
+    <string name="no_comments">No Comments</string>
+    <string name="discussions">Discussions</string>
+
+    <!--Player record Detail-->
+
+    <string-array name="football_handedness">
+        <item>Forward</item>
+        <item>Mid-Field</item>
+        <item>Defense</item>
+        <item>GoalKeeping</item>
+    </string-array>
+
+    <string-array name="position">
+        <item>Left</item>
+        <item>Right</item>
+    </string-array>
+
+    <string-array name="basketball_handedness">
+        <item>Point guard</item>
+        <item>Shooting guard</item>
+        <item>Small forward</item>
+        <item>Power forward</item>
+        <item>Center</item>
+    </string-array>
+
+    <string-array name="cricket_extras">
+        <item>Wide</item>
+        <item>No Ball</item>
+        <item>Leg Bye</item>
+        <item>Bye</item>
+        <item>Penalty</item>
+    </string-array>
+
+    <string-array name="batting_innings">
+        <item>1ST INN</item>
+        <item>2ND INN</item>
+    </string-array>
+
+    <string-array name="volleyball_handedness">
+        <item>Setter</item>
+        <item>Hitter</item>
+        <item>Libero</item>
+        <item>Defense</item>
+    </string-array>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="test">Test</string>
+
+    <string-array name="tournament_tabs">
+        <item>Overview</item>
+        <item>Date &amp; venue</item>
+        <item>Entry fees</item>
+        <item>Rules &amp; Regulation</item>
+    </string-array>
+
+    <string name="could_not_receive_data">Could not receive data</string>
+
+    <string name="teamdelete">Are you want to delete team?</string>
+    <string name="error500">Something went wrong</string>
+    <string name="type_of_sport">Type Of Sport</string>
+    <string name="organized_by">Organized by</string>
+    <string name="description">Description</string>
+    <string name="schedule">Schedule</string>
+    <string name="rules_regulation">Rules &amp; Regulation</string>
+    <string name="call_title_content">Choose number</string>
+    <string name="nostream">No feeds to display</string>
+    <string name="no_buzz_to_display">No buzz to display</string>
+
+    <string name="team_one">Team one</string>
+    <string name="team_two">Team two</string>
+    <string name="_3p">3P</string>
+    <string name="_1p">1P</string>
+    <string name="_2p">2P</string>
+    <string name="bench_players">Bench Players:</string>
+    <string name="over_view">Over view</string>
+    <string name="location">Location</string>
+    <string name="team_detail_save">Save</string>
+    <string name="invite_players">Invite Players</string>
+    <string name="no_players">No Players</string>
+    <string name="exitteam">Are you want to exit from this team?</string>
+
+    <!--Tournament detail-->
+    <string name="call">call</string>
+    <string name="fixtures">Fixtures</string>
+    <string name="no_tournament_detail_found">No tournament detail found</string>
+
+    <!--Football score card-->
+    <string name="player_stats">Player Stats</string>
+    <string name="total_score">Total score</string>
+    <string name="goals">Goals</string>
+    <string name="assists">Assists</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="_1q">1Q</string>
+    <string name="more_player">More Player</string>
+    <string name="less_player">Less Player</string>
+    <string name="score_update">Score Update</string>
+
+    <!--Cricket score card-->
+    <string name="batting">Batting</string>
+    <string name="bowling">Bowling</string>
+    <string name="extras">Extras</string>
+    <string name="run">R</string>
+    <string name="ball">B</string>
+    <string name="fours">4\'s</string>
+    <string name="sixes">6\'s</string>
+    <string name="over">O</string>
+    <string name="maiden">M</string>
+    <string name="wicket">W</string>
+    <string name="in">in</string>
+    <string name="slash">/</string>
+    <string name="overs">overs</string>
+    <string name="zero">0</string>
+    <string name="players">Players</string>
+    <string name="vs">Vs</string>
+    <string name="batsmen">Batsmen</string>
+    <string name="strike_rate">SR</string>
+    <string name="bowlers">Bowlers</string>
+    <string name="economy">ECO</string>
+    <string name="match_summary">Match Summary</string>
+    <string name="right">Right</string>
+
+    <!--player Invite-->
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+
+    <!--My Match-->
+    <string name="no_match">No Match</string>
+    <string name="invites">Invites</string>
+    <string name="requested">Requested</string>
+    <string name="scheduled">Scheduled</string>
+    <string name="completed">Completed</string>
+    <string name="received">Received</string>
+    <string name="view_profile">View Profile</string>
+    <string name="reject_request">Reject Request</string>
+
+    <!--Buzz-->
+    <string name="write_comment">Write Comment</string>
+
+    <!--Explore-->
+    <string name="explore">Explore</string>
+    <string name="search">Search</string>
+    <string name="search_player_team">Search player/team</string>
+    <string name="filter">Filter</string>
+    <string name="reset">Reset</string>
+    <string name="sort_by">Sort by</string>
+    <string name="by_sport">By Sport</string>
+    <string name="by_location">By Location</string>
+
+    <!--Forgot Password-->
+    <string name="forgot_your_password">Forgot Your Password?</string>
+
+    <!--Home Activity-->
+    <string name="home">Home</string>
+    <string name="stream">Stream</string>
+    <string name="buzz">Buzz</string>
+
+    <!--Login Activity-->
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="don_t_have_an_account">Don\'t have an account ?</string>
+
+    <!--Menu-->
+    <string name="my_profile">MY PROFILE</string>
+    <string name="my_teams">MY TEAMS</string>
+    <string name="my_matches">MY MATCHES</string>
+    <string name="chat">CHAT</string>
+    <string name="sign_out">SIGN OUT</string>
+
+    <!--Schedule-->
+    <string name="form_team">Form Team</string>
+    <string name="book_venue">Book Venue</string>
+    <string name="get_venue">GET VENUE</string>
+    <string name="sports">Sports</string>
+    <string name="colon">:</string>
+    <string name="average_cost">Average cost</string>
+    <string name="opening_hours">Opening hours</string>
+
+    <!--Discussion-->
+    <string name="latest_discussions">Latest Discussions</string>
+    <string name="trending_discussions">Trending Discussions</string>
+    <string name="start_a_discussion">Start a Discussion</string>
+    <string name="showing">Showing:</string>
+    <string name="latest">Latest</string>
+    <string name="new_discussion">New Discussion</string>
+    <string name="title">Title</string>
+    <string name="post">Post</string>
+
+    <!--Sign Up-->
+    <string name="name">Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="already_have_an_account">Already have an account ?</string>
+    <string name="enter_otp_received">Enter OTP Received</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="personal_details">Personal Details</string>
+
+    <!--Payment Activity-->
+    <string name="amount">Amount</string>
+    <string name="environment">Environment</string>
+    <string name="merchant_key">Merchant Key</string>
+    <string name="gtkffx">gtKFFx</string>
+    <string name="email">Email</string>
+    <string name="xyz_gmail_com">xyz@gmail.com</string>
+    <string name="pay_now">Pay Now</string>
+
+    <!--Player profile-->
+    <string name="individual">Individual</string>
+    <string name="both">Both</string>
+    <string name="favourite_sports">Choose your favourite sports</string>
+    <string name="age">Age</string>
+    <string name="teams">Teams</string>
+    <string name="invite_to_team">Invite to Team</string>
+    <string name="cancel_invite_request">Cancel Invite Request</string>
+    <string name="request_match">Request Match</string>
+
+    <!--Match info-->
+    <string name="type_of_match">Type Of Match</string>
+    <string name="date_amp_time"><![CDATA[Date & Time]]></string>
+    <string name="venue_amount">Venue Amount</string>
+    <string name="opponent_team">Opponent Team</string>
+    <string name="status">Status</string>
+
+    <!--Team Info-->
+    <string name="team_record">Team Record</string>
+    <string name="overview">Overview</string>
+    <string name="matches">Matches</string>
+    <string name="won">won</string>
+    <string name="lost">Lost</string>
+    <string name="last_game">Last Game</string>
+    <string name="invite_for_match">Invite for Match</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="delete_team">Delete team</string>
+    <string name="exit_from_this_team">Exit from team</string>
+    <string name="search_location">Search Location</string>
+    <string name="join_team">Join Team</string>
+    <string name="invite_to_match">Invite to Match</string>
+    <string name="add_new_member">Add New Member</string>
+    <string name="player_exist">Player exist</string>
+    <string name="select_your_squad">Select your squad</string>
+    <string name="remove_from_team">Remove from team</string>
+
+    <!--Flag Match-->
+    <string name="absent">Absent</string>
+    <string name="abusive_words">Abusive words</string>
+    <string name="others">Others</string>
+    <string name="reason">Reason</string>
+    <string name="trending">\"Trending\"</string>
+    <string name="flag_match">Flag Match</string>
+    <string name="apologise_for_inconvenience">Apologise for inconvenience</string>
+    <string name="help_us_understand_the_situation_better">Help us understand the situation better</string>
+    <string name="false_scores_submitted">False scores submitted</string>
+    <string name="player_team_didn_t_turn_up">Player / Team didn\'t turn up</string>
+    <string name="offensive_conduct_during_match">Offensive conduct during match</string>
+    <string name="flag">Flag</string>
+    <string name="type_your_message">Type your message</string>
+    <string name="appreciate_your_inputs">Appreciate your inputs.</string>
+    <string name="required_activities_will_be_carried_out">Required activities will be carried out</string>
+
+
+</resources>

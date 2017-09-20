@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/discussion_drawable_bg"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/inflater_book_venue_list_item_ll_discussion_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <ImageView
+                android:id="@+id/inflater_book_venue_list_item_iv_venue_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/map_pointer" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/inflater_book_venue_list_item_iv_venue_image"
+                android:layout_toRightOf="@id/inflater_book_venue_list_item_iv_venue_image"
+                android:orientation="vertical"
+                android:paddingLeft="5dp">
+
+                <com.ontro.customui.RegularTextView
+                    android:id="@+id/inflater_book_venue_list_item_tv_venue_name"
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    customui:medium="roboto_regular.ttf" />
+
+                <com.ontro.customui.RegularTextView
+                    android:id="@+id/inflater_book_venue_list_item_tv_location_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:textAllCaps="true"
+                    android:textColor="#7B94AF"
+                    android:textSize="10dp"
+                    customui:medium="roboto_regular.ttf" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="#304352" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp">
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_book_venue_list_item_tv_sports"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="@string/sports"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/spliter"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/inflater_book_venue_list_item_tv_sports"
+                android:layout_toRightOf="@id/inflater_book_venue_list_item_tv_sports"
+                android:text="@string/colon"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_book_venue_list_item_tv_sports_name"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/spliter"
+                android:layout_toRightOf="@id/spliter"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp">
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_book_venue_list_item_tv_avg_cost"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="@string/average_cost"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/spliter2"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/inflater_book_venue_list_item_tv_avg_cost"
+                android:layout_toRightOf="@id/inflater_book_venue_list_item_tv_avg_cost"
+                android:text="@string/colon"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_book_venue_list_item_tv_avg_cost_value"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/spliter2"
+                android:layout_toRightOf="@id/spliter2"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp">
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_book_venue_list_item_tv_opening_hours"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="@string/opening_hours"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/spliter3"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/inflater_book_venue_list_item_tv_opening_hours"
+                android:layout_toRightOf="@id/inflater_book_venue_list_item_tv_opening_hours"
+                android:text="@string/colon"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_book_venue_list_item_tv_opening_hours_value"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/spliter3"
+                android:layout_toRightOf="@id/spliter3"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/inflater_book_venue_list_item_ll_image_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <!--<ImageView-->
+            <!--android:id="@+id/inflater_book_venue_list_item_iv_venue_image_1"-->
+            <!--android:layout_width="35dp"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:src="@drawable/image1" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/inflater_book_venue_list_item_iv_venue_image_2"-->
+            <!--android:layout_width="35dp"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:src="@drawable/image2" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/inflater_book_venue_list_item_iv_venue_image_3"-->
+            <!--android:layout_width="35dp"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:src="@drawable/image3" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/image4"-->
+            <!--android:layout_width="35dp"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:src="@drawable/image1" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/image5"-->
+            <!--android:layout_width="35dp"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:layout_marginLeft="5dp"-->
+            <!--android:scaleType="centerCrop"-->
+            <!--android:src="@drawable/image2" />-->
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

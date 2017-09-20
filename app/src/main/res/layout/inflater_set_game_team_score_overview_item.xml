@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/inflater_set_game_team_score_overview_item_iv"
+            android:src="@drawable/profiledefaultimg"
+            android:contentDescription="@string/my_profile" />
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/inflater_set_game_team_score_overview_item_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/dp_7"
+            android:layout_marginRight="@dimen/dp_7"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            customui:medium="roboto_regular.ttf" />
+
+    </LinearLayout>
+
+</LinearLayout>

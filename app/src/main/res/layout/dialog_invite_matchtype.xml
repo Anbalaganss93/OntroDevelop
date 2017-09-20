@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RadioGroup
+        android:id="@+id/radiogroupie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rb_type1"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="5dp"
+            android:background="@null"
+            android:button="@null"
+            android:drawableLeft="@drawable/discussion_dialog_radio_drawable"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/discussion_dialog_radio_drawable"
+            android:text="@string/street"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/rb_type2"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@null"
+            android:button="@null"
+            android:drawableLeft="@drawable/discussion_dialog_radio_drawable"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/discussion_dialog_radio_drawable"
+            android:text="@string/leak"
+            android:textColor="@color/black" />
+
+        <RadioButton
+            android:id="@+id/rb_type3"
+            style="@android:style/TextAppearance.DeviceDefault.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="5dp"
+            android:paddingBottom="10dp"
+            android:background="@null"
+            android:button="@null"
+            android:drawableLeft="@drawable/discussion_dialog_radio_drawable"
+            android:drawablePadding="10dp"
+            android:drawableStart="@drawable/discussion_dialog_radio_drawable"
+            android:text="@string/tournament"
+            android:textColor="@color/black" />
+    </RadioGroup>
+</LinearLayout>

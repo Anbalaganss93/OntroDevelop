@@ -1,0 +1,1 @@
+include ':app', ':sdkui', ':lib_swipe', ':slideview'

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_new_discussion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_app_background"
+        android:orientation="vertical"
+        tools:context="com.ontro.NewDiscussionActivity">
+
+        <RelativeLayout
+            android:id="@+id/activity_explore_player_list_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/toolbar_color">
+
+            <ImageView
+                android:id="@+id/activity_explore_player_list_iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_back_arrow" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/pd_toolbar_text"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/activity_explore_player_list_iv_back"
+                android:layout_toRightOf="@id/activity_explore_player_list_iv_back"
+                android:text="@string/new_discussion"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/discussion_name"
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/new_discussion_bg"
+                    android:drawablePadding="5dp"
+                    android:gravity="top|left"
+                    android:hint="@string/title"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:maxLength="150"
+                    android:minHeight="90dp"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/hint_color" />
+
+                <EditText
+                    android:id="@+id/discussion_content"
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/new_discussion_bg"
+                    android:drawablePadding="5dp"
+                    android:gravity="top|left"
+                    android:hint="@string/description"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:maxLength="300"
+                    android:minHeight="200dp"
+                    android:padding="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/hint_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="bottom"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/post"
+                        android:layout_width="match_parent"
+                        android:layout_height="42dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_bg_normal"
+                        android:padding="10dp"
+                        android:text="@string/post"
+                        android:textAllCaps="true"
+                        android:textAppearance="@android:style/TextAppearance.Small"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.github.rahatarmanahmed.cpv.CircularProgressView
+                android:id="@+id/activity_explore_player_list_progress_view"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:visibility="visible"
+                app:cpv_animAutostart="true"
+                app:cpv_indeterminate="true" />
+        </FrameLayout>
+    </LinearLayout>
+</ScrollView>
+

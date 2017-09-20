@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            android:padding="7dp">
+
+            <LinearLayout
+                android:id="@+id/parent_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/fragment_team_info_ll_invite_accept"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/com_facebook_blue"
+                        android:orientation="horizontal"
+                        android:padding="10dp"
+                        android:weightSum="1">
+
+                        <com.ontro.customui.RegularTextView
+                            style="@android:style/TextAppearance.DeviceDefault.Small"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7"
+                            android:gravity="center_vertical"
+                            android:padding="10dp"
+                            android:text="@string/accept_invite"
+                            android:textColor="@color/white"
+                            customui:medium="roboto_regular.ttf" />
+
+                        <ImageView
+                            android:id="@+id/fragment_team_info_iv_invite_accept"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="end"
+                            android:layout_weight="0.15"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/dp_10"
+                            android:src="@drawable/ic_tick_white" />
+
+                        <ImageView
+                            android:id="@+id/fragment_team_info_iv_invite_decline"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.15"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/dp_10"
+                            android:src="@drawable/ic_close_white" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@drawable/myteam_bg">
+
+                        <com.ontro.customui.RegularTextView
+                            android:id="@+id/txt_level"
+                            style="@android:style/TextAppearance.DeviceDefault.Small"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="20dp"
+                            android:drawablePadding="5dp"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:textColor="@color/white"
+                            customui:medium="roboto_regular.ttf" />
+
+                        <ImageView
+                            android:id="@+id/level_badge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginRight="10dp"
+                            android:contentDescription="@null" />
+
+                        <ProgressBar
+                            android:id="@+id/progress_bar"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="fill_parent"
+                            android:layout_height="5dp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="0.3dp"
+                            android:layout_marginLeft="1.5dp"
+                            android:layout_marginRight="1.5dp"
+                            android:progress="0" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/myteam_bg"
+                        android:orientation="vertical">
+
+                        <com.ontro.customui.RegularTextView
+                            style="@android:style/TextAppearance.DeviceDefault.Small"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:text="@string/overview"
+                            android:textColor="#908D8D"
+                            customui:medium="roboto_regular.ttf" />
+
+                        <com.ontro.customui.RegularTextView
+                            android:id="@+id/txt_description"
+                            style="@android:style/TextAppearance.DeviceDefault.Small"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:padding="10dp"
+                            android:textColor="@color/white"
+                            customui:medium="roboto_regular.ttf" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fragment_team_info_ll_team_record"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/myteam_bg"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp">
+
+                        <com.ontro.customui.RegularTextView
+                            style="@android:style/TextAppearance.DeviceDefault.Small"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:padding="10dp"
+                            android:text="@string/team_record"
+                            android:textAllCaps="false"
+                            android:textColor="#908D8D"
+                            customui:medium="roboto_regular.ttf" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.ontro.customui.BoldTextView
+                                    android:id="@+id/txt_matches"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:padding="5dp"
+                                    android:textAllCaps="true"
+                                    android:textAppearance="@android:style/TextAppearance.Small"
+                                    android:textColor="@color/white"
+                                    customui:bold="roboto_bold.ttf" />
+
+                                <com.ontro.customui.RegularTextView
+                                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center_vertical"
+                                    android:maxLines="1"
+                                    android:padding="5dp"
+                                    android:text="@string/matches"
+                                    android:textAllCaps="true"
+                                    android:textColor="#A8B6C4"
+                                    customui:medium="roboto_regular.ttf" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.ontro.customui.BoldTextView
+                                    android:id="@+id/txt_won"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:padding="5dp"
+                                    android:textAllCaps="true"
+                                    android:textAppearance="@android:style/TextAppearance.Small"
+                                    android:textColor="@color/white"
+                                    customui:bold="roboto_bold.ttf" />
+
+                                <com.ontro.customui.RegularTextView
+                                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center_vertical"
+                                    android:maxLines="1"
+                                    android:padding="5dp"
+                                    android:text="@string/won"
+                                    android:textAllCaps="true"
+                                    android:textColor="#A8B6C4"
+                                    customui:medium="roboto_regular.ttf" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="vertical">
+
+                                <com.ontro.customui.BoldTextView
+                                    android:id="@+id/txt_lost"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:padding="5dp"
+                                    android:textAllCaps="true"
+                                    android:textAppearance="@android:style/TextAppearance.Small"
+                                    android:textColor="@color/white"
+                                    customui:bold="roboto_bold.ttf" />
+
+                                <com.ontro.customui.RegularTextView
+                                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:gravity="center_vertical"
+                                    android:maxLines="1"
+                                    android:padding="5dp"
+                                    android:text="@string/lost"
+                                    android:textAllCaps="true"
+                                    android:textColor="#A8B6C4"
+                                    customui:medium="roboto_regular.ttf" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fragment_team_info_ll_last_game"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/myteam_bg"
+                        android:orientation="vertical"
+                        android:padding="10dp"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.ontro.customui.RegularTextView
+                                style="@android:style/TextAppearance.DeviceDefault.Small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:maxLines="1"
+                                android:padding="10dp"
+                                android:text="@string/last_game"
+                                android:textAllCaps="false"
+                                android:textColor="#A8B6C4"
+                                customui:medium="roboto_regular.ttf" />
+
+                            <com.ontro.customui.RegularTextView
+                                style="@android:style/TextAppearance.DeviceDefault.Small"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:maxLines="1"
+                                android:padding="10dp"
+                                android:text=""
+                                android:textAllCaps="false"
+                                android:textColor="#A8B6C4"
+                                customui:medium="roboto_regular.ttf" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.ontro.customui.RegularTextView
+                                style="@android:style/TextAppearance.DeviceDefault.Small"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:drawableLeft="@drawable/team_logo"
+                                android:drawableStart="@drawable/team_logo"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:paddingLeft="10dp"
+                                android:paddingStart="10dp"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                customui:medium="roboto_regular.ttf" />
+
+                            <com.ontro.customui.RegularTextView
+                                style="@android:style/TextAppearance.DeviceDefault.Small"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:padding="10dp"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white"
+                                customui:medium="roboto_regular.ttf" />
+
+                            <com.ontro.customui.RegularTextView
+                                style="@android:style/TextAppearance.DeviceDefault.Small"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="end|center_vertical"
+                                android:maxLines="1"
+                                android:padding="10dp"
+                                android:textAllCaps="true"
+                                android:textColor="@color/white"
+                                customui:medium="roboto_regular.ttf" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+             <!--   <Button
+                    android:id="@+id/invite"
+                    android:layout_width="match_parent"
+                    android:layout_height="42dp"
+                    android:layout_margin="15dp"
+                    android:background="@drawable/button_bg_normal"
+                    android:padding="10dp"
+                    android:text="@string/invite_for_match"
+                    android:textAllCaps="true"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="#ffffff"
+                    android:visibility="gone" />-->
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>

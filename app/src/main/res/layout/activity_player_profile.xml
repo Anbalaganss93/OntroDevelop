@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_app_background">
+
+    <LinearLayout
+        android:id="@+id/activity_player_profile_ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/infobackground">
+
+        <ImageButton
+            android:id="@+id/activity_player_profile_iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|start"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@null"
+            android:padding="10dp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/activity_player_profile_civ_player_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/profiledefaultimg"
+                app:civ_border_color="#0000ffff"
+                app:civ_border_width="0dp" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:orientation="vertical">
+
+                <com.ontro.customui.BoldTextView
+                    android:id="@+id/activity_player_profile_tv_name"
+                    style="@android:style/TextAppearance.DeviceDefault.Medium"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/white"
+                    customui:bold="roboto_bold.ttf" />
+
+                <com.ontro.customui.RegularTextView
+                    android:id="@+id/activity_player_profile_tv_location"
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/white"
+                    customui:medium="roboto_regular.ttf" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_player_profile_ll_filter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="25dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp">
+
+                <ImageView
+                    android:id="@+id/activity_player_profile_iv_filtered_sport_image"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/ic_profile_edit"
+                    android:contentDescription="@string/sports"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/activity_player_profile_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:layout_below="@+id/activity_player_profile_ll_container"
+        app:tabBackground="@color/bg_profile_tab_selector"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@color/white"
+        app:tabMode="scrollable"
+        android:gravity="center"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="#D8D8D8"
+        style="@style/MyCustomTabLayout"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/activity_player_profile_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/activity_player_profile_tab"
+        android:layout_above="@+id/activity_player_profile_ll_btn_container"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <LinearLayout
+        android:id="@+id/activity_player_profile_ll_btn_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/dp_10"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/activity_player_profile_btn_player_invite"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_5"
+            android:layout_weight="1"
+            android:background="@drawable/bg_blue_invite_to_team"
+            android:text="@string/invite_to_team"
+            android:textAllCaps="false"
+            android:textSize="@dimen/dp_16"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/activity_player_profile_btn_request_match"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_weight="1"
+            android:background="@drawable/button_bg_normal"
+            android:text="@string/request_match"
+            android:textAllCaps="false"
+            android:textSize="@dimen/dp_16"
+            android:textColor="@color/white"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

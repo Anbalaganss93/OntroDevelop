@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:baselineAligned="false">
+
+        <LinearLayout
+            android:id="@+id/activity_football_score_update_ll"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatCheckBox
+                android:id="@+id/inflater_football_score_update_view_item_cb_goal_keeper"
+                android:layout_width="@dimen/dp_24"
+                android:layout_height="@dimen/dp_24"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:button="@drawable/golf_selector_check_box"
+                android:padding="@dimen/dp_5"/>
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_football_score_update_view_item_tv_player_name"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/dp_5"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:paddingRight="@dimen/dp_10"
+                android:maxLines="1"
+                android:textAllCaps="false"
+                android:textColor="@color/color_cement"
+                customui:medium="roboto_regular.ttf" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:gravity="center"
+            android:layout_weight="0.3">
+
+            <ImageView
+                android:id="@+id/inflater_football_score_update_view_item_iv_goal_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/dp_1"
+                android:layout_marginRight="@dimen/dp_5"
+                android:src="@drawable/ic_score_minus"/>
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_football_score_update_view_item_tv_player_goals"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/vs_circledrawable"
+                android:gravity="center"
+                android:imeOptions="flagNoExtractUi"
+                android:inputType="number"
+                android:maxLength="2"
+                android:maxLines="1"
+                android:minWidth="@dimen/dp_35"
+                android:padding="@dimen/dp_10"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf"/>
+
+            <ImageView
+                android:id="@+id/inflater_football_score_update_view_item_iv_goal_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/dp_1"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:src="@drawable/ic_score_plus" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:gravity="center"
+            android:layout_weight="0.3">
+
+            <ImageView
+                android:id="@+id/inflater_football_score_update_view_item_iv_assist_sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/dp_5"
+                android:padding="@dimen/dp_1"
+                android:src="@drawable/ic_score_minus" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_football_score_update_view_item_tv_player_assists"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:minWidth="@dimen/dp_35"
+                android:selectAllOnFocus="true"
+                android:inputType="number"
+                android:imeOptions="flagNoExtractUi"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:maxLength="2"
+                android:padding="@dimen/dp_10"
+                android:background="@drawable/vs_circledrawable"
+                android:gravity="center"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf"/>
+
+            <ImageView
+                android:id="@+id/inflater_football_score_update_view_item_iv_assist_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/dp_1"
+                android:layout_marginRight="@dimen/dp_5"
+                android:src="@drawable/ic_score_plus" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

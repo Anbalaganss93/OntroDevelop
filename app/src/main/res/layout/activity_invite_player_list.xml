@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ontro.ExplorePlayerListActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/app_background_color"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/activity_explore_player_list_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/toolbar_color">
+
+            <ImageView
+                android:id="@+id/activity_explore_player_list_iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:contentDescription="@null"
+                android:padding="10dp"
+                android:src="@drawable/ic_back_arrow" />
+
+            <ImageView
+                android:id="@+id/activity_explore_player_list_iv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:padding="3dp"
+                android:src="@drawable/ic_menu_search"
+                android:visibility="visible" />
+
+            <EditText
+                android:id="@+id/activity_explore_player_list_et_location_search"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/activity_explore_player_list_iv_back"
+                android:layout_toLeftOf="@id/activity_explore_player_list_iv_search"
+                android:layout_toRightOf="@id/activity_explore_player_list_iv_back"
+                android:layout_toStartOf="@id/activity_explore_player_list_iv_search"
+                android:background="@drawable/searchbackground"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:hint="@string/search"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingBottom="5dp"
+                android:paddingEnd="0dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="0dp"
+                android:paddingStart="10dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/toolbar_color"
+                android:textColorHint="@color/toolbar_color"
+                android:visibility="gone" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/pd_toolbar_text"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/activity_explore_player_list_iv_back"
+                android:layout_toLeftOf="@id/activity_explore_player_list_iv_search"
+                android:layout_toRightOf="@id/activity_explore_player_list_iv_back"
+                android:layout_toStartOf="@id/activity_explore_player_list_iv_search"
+                android:text="@string/invite_players"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf" />
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.malinskiy.superrecyclerview.SuperRecyclerView
+                android:id="@+id/activity_explore_player_list_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:paddingTop="2dp"
+                app:layout_empty="@layout/emptyview"
+                app:layout_moreProgress="@layout/view_more_progress"
+                app:mainLayoutId="@layout/layout_recyclerview_verticalscroll"
+                app:recyclerClipToPadding="false"
+                app:scrollbarStyle="insideOverlay" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/activity_explore_player_list_tv_empty"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/no_players"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                customui:medium="roboto_regular.ttf" />
+
+            <com.github.rahatarmanahmed.cpv.CircularProgressView
+                android:id="@+id/activity_explore_player_list_progress_view"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:cpv_animAutostart="true"
+                app:cpv_indeterminate="true" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

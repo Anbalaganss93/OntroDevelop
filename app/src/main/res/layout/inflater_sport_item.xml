@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_10"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/inflater_sport_item_rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_background_color"
+        android:padding="@dimen/dp_15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <RelativeLayout
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.48">
+
+                <ImageView
+                    android:id="@+id/inflater_sport_item_iv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="@string/sports"
+                    android:scaleType="centerInside" />
+
+                <com.ontro.customui.BoldTextView
+                    android:id="@+id/inflater_sport_item_tv_name"
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_5"
+                    android:layout_marginStart="@dimen/dp_5"
+                    android:layout_toEndOf="@+id/inflater_sport_item_iv"
+                    android:layout_toRightOf="@+id/inflater_sport_item_iv"
+                    android:maxLines="2"
+                    android:textColor="@color/white"
+                    customui:bold="roboto_bold.ttf" />
+
+            </RelativeLayout>
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/inflater_sport_item_tv_specialization"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="0.52"
+                android:background="@drawable/bg_sport_position_unselection"
+                android:drawableEnd="@drawable/show_down_arrow"
+                android:drawablePadding="@dimen/dp_10"
+                android:drawableRight="@drawable/show_down_arrow"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:padding="@dimen/dp_7"
+                android:textColor="@color/black"
+                customui:medium="roboto_regular.ttf" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/inflater_sport_item_fl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

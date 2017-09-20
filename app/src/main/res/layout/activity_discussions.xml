@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_discussions"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_app_background"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/activity_discussions_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/toolbar_color">
+
+        <ImageView
+            android:id="@+id/activity_discussions_iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:padding="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/ic_back_arrow" />
+
+        <com.ontro.customui.RegularTextView
+            android:id="@+id/explore_toolbar_text"
+            style="@android:style/TextAppearance.DeviceDefault.Medium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/activity_discussions_iv_back"
+            android:layout_toRightOf="@id/activity_discussions_iv_back"
+            android:text="@string/discussions"
+            android:textColor="@color/white"
+            customui:medium="roboto_regular.ttf" />
+
+        <ImageView
+            android:id="@+id/report_discussion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:padding="10dp"
+            android:src="@drawable/report" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:id="@+id/commentbottomcontainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#283038" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/send"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/view2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:contentDescription="@null"
+                    android:paddingEnd="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:src="@drawable/send_arrow" />
+
+                <EditText
+                    android:id="@+id/et_comment"
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_toLeftOf="@id/send"
+                    android:layout_toStartOf="@id/send"
+                    android:background="@null"
+                    android:drawablePadding="5dp"
+                    android:hint="@string/write_comment"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:maxLength="300"
+                    android:maxLines="6"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="#E2E2E2" />
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_alignEnd="@id/et_comment"
+                    android:layout_alignLeft="@id/et_comment"
+                    android:layout_alignRight="@id/et_comment"
+                    android:layout_alignStart="@id/et_comment"
+                    android:layout_below="@id/et_comment"
+                    android:background="#C32429" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/commentbottomcontainer"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/discussion_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="5dp"
+                    android:paddingEnd="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingStart="20dp"
+                    android:paddingTop="20dp">
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/discussion_title"
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal">
+
+                        <com.mikhaellopez.circularimageview.CircularImageView
+                            android:id="@+id/discussion_image"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="1dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@id/discussion_image"
+                            android:layout_toRightOf="@id/discussion_image"
+                            android:orientation="vertical"
+                            android:paddingLeft="5dp">
+
+                            <com.ontro.customui.RegularTextView
+                                android:id="@+id/discussion_name"
+                                style="@android:style/TextAppearance.DeviceDefault.Small"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white"
+                                customui:medium="roboto_regular.ttf" />
+
+                            <com.ontro.customui.RegularTextView
+                                android:id="@+id/seen_hours"
+                                style="@android:style/TextAppearance.DeviceDefault.Small"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:textColor="#7B94AF"
+                                customui:medium="roboto_regular.ttf" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/discussion_comment"
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="@color/white"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/total_comment"
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical|right"
+                        android:layout_marginTop="10dp"
+                        android:drawableLeft="@drawable/message_blue"
+                        android:gravity="center_vertical|right"
+                        android:padding="5dp"
+                        android:textColor="#4A5B6C"
+                        customui:medium="roboto_regular.ttf" />
+                </LinearLayout>
+
+                <com.ontro.customui.RegularTextView
+                    android:id="@+id/comment_title"
+                    style="@android:style/TextAppearance.DeviceDefault.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#141E28"
+                    android:clickable="true"
+                    android:focusableInTouchMode="true"
+                    android:paddingBottom="15dp"
+                    android:paddingEnd="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingTop="15dp"
+                    android:text="@string/comments"
+                    android:textColor="@color/white"
+                    customui:medium="roboto_regular.ttf" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/activity_discussions_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <com.ontro.customui.RegularTextView
+                        android:id="@+id/activity_discussions_tv_empty"
+                        style="@android:style/TextAppearance.DeviceDefault.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/no_comments"
+                        android:textColor="@color/bule_text"
+                        android:visibility="gone"
+                        customui:medium="roboto_regular.ttf" />
+                </FrameLayout>
+                <!--<LinearLayout
+                    android:id="@+id/comments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical"></LinearLayout>-->
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </RelativeLayout>
+
+</LinearLayout>

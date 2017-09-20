@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sidemenu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/homeimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginRight="25dp"
+        android:contentDescription="@null"
+        android:paddingLeft="15dp"
+        android:src="@drawable/logo" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:id="@+id/menu_profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/home_gradient"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/menu1"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@null"/>
+
+                <com.ontro.customui.RegularTextView
+                    android:id="@+id/menu1_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:letterSpacing="0.1"
+                    android:paddingLeft="10dp"
+                    android:text="@string/my_profile"
+                    android:textAllCaps="true"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="@color/white"
+                    customui:medium="roboto_regular.ttf"
+                    tools:ignore="UnusedAttribute" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_teams"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/home_gradient"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/menu2"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@null"/>
+
+                <com.ontro.customui.RegularTextView
+                    android:id="@+id/menu2_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:letterSpacing="0.1"
+                    android:paddingLeft="10dp"
+                    android:text="@string/my_teams"
+                    android:textAllCaps="true"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="@color/white"
+                    customui:medium="roboto_regular.ttf"
+                    tools:ignore="UnusedAttribute" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_explore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/home_gradient"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_menu_search"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@null"/>
+
+                <com.ontro.customui.RegularTextView
+                    android:id="@+id/menu3_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:letterSpacing="0.1"
+                    android:paddingLeft="10dp"
+                    android:text="@string/explore"
+                    android:textAllCaps="true"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="@color/white"
+                    customui:medium="roboto_regular.ttf"
+                    tools:ignore="UnusedAttribute" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_matches"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/home_gradient"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/menu4"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@null"/>
+
+                <com.ontro.customui.RegularTextView
+                    android:id="@+id/menu4_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:letterSpacing="0.1"
+                    android:paddingLeft="10dp"
+                    android:text="@string/my_matches"
+                    android:textAllCaps="true"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="@color/white"
+                    customui:medium="roboto_regular.ttf"
+                    tools:ignore="UnusedAttribute" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/home_gradient"
+                android:orientation="horizontal"
+                android:visibility="visible"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/chat"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@null"/>
+
+                <com.ontro.customui.RegularTextView
+                    android:id="@+id/menu6_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:letterSpacing="0.1"
+                    android:paddingLeft="10dp"
+                    android:text="@string/chat"
+                    android:textAllCaps="true"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="@color/white"
+                    customui:medium="roboto_regular.ttf"
+                    tools:ignore="UnusedAttribute" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_sign_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/home_gradient"
+                android:orientation="horizontal"
+                android:padding="15dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/menu7"
+                    android:scaleType="centerInside"
+                    android:contentDescription="@null"/>
+
+                <com.ontro.customui.RegularTextView
+                    android:id="@+id/menu7_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:letterSpacing="0.1"
+                    android:paddingLeft="10dp"
+                    android:text="@string/sign_out"
+                    android:textAllCaps="true"
+                    android:textAppearance="@android:style/TextAppearance.Small"
+                    android:textColor="@color/white"
+                    customui:medium="roboto_regular.ttf"
+                    tools:ignore="UnusedAttribute" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

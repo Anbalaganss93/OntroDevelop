@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:customui="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ic_app_background"
+    tools:context="com.ontro.FootballScoreUpdateActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/activity_football_score_update_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/toolbar_color">
+
+            <ImageView
+                android:id="@+id/activity_football_score_update_iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:padding="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
+                android:src="@drawable/ic_back_arrow"
+                android:focusable="true"
+                android:clickable="true"
+                android:contentDescription="@null" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/activity_football_score_update_tv_title"
+                style="@android:style/TextAppearance.DeviceDefault.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_toRightOf="@+id/activity_football_score_update_iv_back"
+                android:layout_toEndOf="@+id/activity_football_score_update_iv_back"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:gravity="center_vertical"
+                android:text="@string/score_update"
+                android:textColor="@color/white"
+                customui:medium="roboto_regular.ttf" />
+
+            <ImageView
+                android:id="@+id/activity_football_score_update_iv_flag_match"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:padding="10dp"
+                android:src="@drawable/report"
+                android:visibility="visible" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/game_header_layout" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.ontro.customui.BoldTextView
+                android:id="@+id/activity_football_score_update_tv_player_statistics"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="@string/player_stats"
+                android:textAllCaps="true"
+                android:textColor="@color/color_cement"
+                customui:bold="roboto_bold.ttf" />
+
+            <com.ontro.customui.BoldTextView
+                android:id="@+id/activity_football_score_update_tv_total_score"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:padding="10dp"
+                android:text="@string/total_score"
+                android:textAllCaps="true"
+                android:textColor="@color/color_cement"
+                customui:bold="roboto_bold.ttf" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/activity_football_score_update_cv_team_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:layout_marginBottom="20dp"
+            android:elevation="@dimen/dp_5"
+            card_view:cardBackgroundColor="@color/blue_69"
+            card_view:cardCornerRadius="10dp"
+            android:visibility="gone">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/activity_football_score_update_rv_team_score"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                app:layoutManager="LinearLayoutManager" />
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/activity_football_score_update_cv_player_statistics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:elevation="@dimen/dp_5"
+            card_view:cardBackgroundColor="@color/blue_69"
+            card_view:cardCornerRadius="@dimen/dp_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.ontro.customui.RegularTextView
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:gravity="center_vertical"
+                        android:maxLines="1"
+                        android:padding="@dimen/dp_10"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_cement"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:padding="@dimen/dp_10"
+                        android:text="@string/goals"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_cement"
+                        customui:medium="roboto_regular.ttf" />
+
+                    <com.ontro.customui.RegularTextView
+                        style="@android:style/TextAppearance.DeviceDefault.Small"
+                        android:layout_width="@dimen/dp_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:padding="@dimen/dp_10"
+                        android:text="@string/assists"
+                        android:textAllCaps="false"
+                        android:textColor="@color/color_cement"
+                        customui:medium="roboto_regular.ttf" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/blue_105" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/activity_football_score_update_rv_player_statistics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10"
+                    app:layoutManager="LinearLayoutManager">
+
+                </android.support.v7.widget.RecyclerView>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <RelativeLayout
+            android:id="@+id/activity_football_score_update_rl_player_statistics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20">
+
+            <Button
+                android:id="@+id/activity_football_score_update_btn_next"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_toLeftOf="@+id/activity_football_score_update_tv_skip"
+                android:layout_toStartOf="@+id/activity_football_score_update_tv_skip"
+                android:background="@drawable/score_update_btn_background"
+                android:drawableEnd="@drawable/ic_next_arrow"
+                android:drawablePadding= "@dimen/dp_10"
+                android:drawableRight="@drawable/ic_next_arrow"
+                android:gravity="end|center_vertical"
+                android:paddingRight="@dimen/dp_20"
+                android:text="@string/next"
+                android:textAllCaps="true"
+                android:textColor="@color/white" />
+
+            <com.ontro.customui.RegularTextView
+                android:id="@+id/activity_football_score_update_tv_skip"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_16"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_20"
+                android:text="@string/skip"
+                android:textAllCaps="true"
+                android:textColor="@color/color_cement"
+                customui:medium="roboto_regular.ttf"
+                android:layout_alignParentTop="true" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/activity_football_score_update_rl_total_score"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/activity_football_score_update_btn_submit"
+                style="@android:style/TextAppearance.DeviceDefault.Small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_30"
+                android:layout_marginRight="@dimen/dp_30"
+                android:background="@drawable/score_update_btn_background"
+                android:gravity="center"
+                android:text="@string/submit"
+                android:textAllCaps="true"
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</android.support.v4.widget.NestedScrollView>
